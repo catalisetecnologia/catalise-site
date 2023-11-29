@@ -1,0 +1,251 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { Image } from "astro:assets";
+
+import Botao from "./Botao.astro";
+interface Props {
+  turmas: CollectionEntry<"produtos">;
+  estilo: string;
+  swiper?: boolean;
+  page: string;
+}
+
+const { turmas, estilo, swiper, page } = Astro.props;
+
+const filtro = turmas.data.content.filter((item) => item.page.includes(page));
+---
+
+{
+  !swiper &&
+    filtro.map((material) => (
+      <div class={"card " + estilo}>
+        <div class="capa">
+          <Image
+            src={material.img}
+            alt="Capa da turma"
+            class={material.tag.toLowerCase()}
+          />
+        </div>
+        <div class="texto">
+          <span class={material.tag.toLowerCase()}>{material.tag}</span>
+          <h1>{material.nome}</h1>
+          <Botao
+            estilo="outline-escuro pequeno mt-2"
+            texto="Saiba mais"
+            link={material.link}
+          />
+        </div>
+      </div>
+    ))
+}
+{
+  swiper && (
+    <div class="Swiper swiper-turmas">
+      <div class="swiper-wrapper">
+        {filtro.map((material) => (
+          <div class="swiper-slide">
+            <div class={"card " + estilo}>
+              <div class="capa">
+                <Image
+                  src={material.img}
+                  alt="Capa da turma"
+                  class={material.tag.toLowerCase()}
+                />
+              </div>
+              <div class="texto">
+                <span class={material.tag.toLowerCase()}>{material.tag}</span>
+                <h1>{material.nome}</h1>
+                <Botao
+                  estilo="outline-escuro pequeno mt-2"
+                  texto="Saiba mais"
+                  link={material.link}
+                />
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div class="buttons">
+        <div class="swiper-button-next" />
+        <div class="swiper-button-prev" />
+      </div>
+    </div>
+  )
+}
+<script>
+  import Swiper from "swiper";
+  import "swiper/css";
+  import "swiper/css/navigation";
+
+  import { Navigation } from "swiper/modules";
+
+  const swiper = new Swiper(".swiper-turmas", {
+    modules: [Navigation],
+    slidesPerView: 1.1,
+    spaceBetween: 16,
+    centeredSlides: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      1026: {
+        slidesPerView: 2.2,
+        spaceBetween: 24,
+        centeredSlides: false,
+      },
+      768: {
+        slidesPerView: 3.1,
+        spaceBetween: 24,
+        centeredSlides: false,
+      },
+      520: {
+        slidesPerView: 2,
+        spaceBetween: 24,
+      },
+    },
+  });
+</script>
+<style scoped>
+  .swiper-turmas {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1.6rem;
+  }
+  .swiper-wrapper {
+  }
+  .swiper-slide {
+    width: 18rem;
+    place-self: center;
+    border-radius: 1rem;
+    box-shadow: 0.5rem 0.5rem 1.2rem -0.6rem rgba(0, 0, 0, 0.15);
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 6rem;
+    height: 6rem;
+    background: var(--clr-white);
+    border-radius: 5rem;
+    box-shadow: 0 0.1rem 2rem hsl(0, 0%, 60%);
+    margin: -2.8rem 1rem;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 3rem;
+    height: 3rem;
+    margin-top: -2rem;
+    background: hsl(226, 80%, 14%);
+    border-radius: 10rem;
+    border: 0.18rem solid var(--clr-green);
+  }
+  .swiper-button-next:after,
+  .swiper-rtl .swiper-button-prev:after,
+  .swiper-button-prev:after,
+  .swiper-rtl .swiper-button-next:after {
+    font-size: clamp(0.9rem, 1.2vw, 1.4rem);
+    font-weight: 900;
+    color: var(--clr-green);
+  }
+  .swiper-button-prev {
+    left: -3rem;
+  }
+  .swiper-button-next {
+    right: -3rem;
+  }
+  .card {
+    background-color: var(--clr-white);
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  .grande img.turma {
+    background-image: linear-gradient(
+      45deg,
+      hsl(215, 99%, 65%),
+      hsl(195, 99%, 65%)
+    );
+    background-repeat: no-repeat;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .grande img.revisão {
+    background-image: linear-gradient(
+      45deg,
+      hsl(173, 65%, 41%),
+      hsl(153, 91%, 71%)
+    );
+    background-repeat: no-repeat;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .grande .texto {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    place-content: center;
+    padding: 1rem 2rem 2rem 2rem;
+  }
+  span {
+    font-family: var(--font-bold);
+  }
+  .turma {
+    color: var(--clr-lblue);
+  }
+  .revisão {
+    color: var(--clr-dgreen);
+  }
+  h1 {
+    color: var(--clr-black);
+    font-family: var(--font-black);
+    font-size: clamp(0.9rem, 1.2vw, 1.3rem);
+    margin-top: 0.5rem;
+  }
+  .pequeno {
+    background-color: var(--clr-ice);
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 0fr;
+    min-width: 24rem;
+    width: 100%;
+    direction: rtl;
+  }
+  .pequeno > * {
+    direction: ltr;
+  }
+  .pequeno .capa {
+    position: absolute;
+    right: clamp(-6.6rem, -7.6vw, -7rem);
+    top: -1.2rem;
+    height: auto;
+    transform: scale(0.8);
+  }
+  .pequeno .texto {
+    padding: 2.2rem 2.2rem 2.2rem 2.2rem;
+    z-index: 1;
+    text-align: left;
+  }
+  @media screen and (min-width: 1025px) {
+    .swiper-turmas {
+      overflow: hidden;
+      width: 52%;
+      position: absolute;
+      right: 0;
+      margin-top: 0;
+    }
+    .grande .texto {
+      padding: 1rem 3rem 3rem 3rem;
+    }
+    .swiper-button-prev {
+      left: 0rem;
+    }
+    .swiper-button-next {
+      right: 0rem;
+    }
+  }
+</style>

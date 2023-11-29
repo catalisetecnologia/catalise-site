@@ -1,0 +1,115 @@
+---
+const { texto, estilo, link } = Astro.props;
+//claro, outline-claro, outline-escuro, grande, pequeno
+---
+
+<a href={link} class={estilo}>{texto}</a>
+<style scoped>
+  a {
+    display: block;
+    font-family: var(--font-book);
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    background: linear-gradient(
+      276deg,
+      hsl(173, 65%, 41%) -0.02%,
+      hsl(173, 90%, 61%) 85.16%
+    );
+    border: none;
+    border-radius: 0.6rem;
+    color: #333;
+    cursor: pointer;
+    filter: drop-shadow(0rem 0rem 1rem hsla(215, 100%, 25%, 0.6))
+      drop-shadow(0rem 0rem 1rem hsl(195, 63%, 24%, 0.6));
+    width: auto;
+    height: max-content;
+    transition: all 0.5s ease;
+  }
+  a:hover {
+    background: linear-gradient(
+      180deg,
+      hsl(173, 65%, 41%) -0.02%,
+      hsl(173, 90%, 61%) 85.16%
+    );
+    filter: drop-shadow(-0.6rem -0.4rem 0.9rem hsl(215, 100%, 25%))
+      drop-shadow(0.6rem 0.4rem 0.9rem hsl(195, 63%, 24%));
+  }
+
+  .claro {
+    color: hsl(210, 33%, 99%);
+    filter: none;
+    background: linear-gradient(
+      276deg,
+      hsl(173, 65%, 41%) -0.02%,
+      hsl(214, 51%, 47%) 85.16%
+    );
+  }
+  .claro:hover {
+    background: linear-gradient(
+      180deg,
+      hsl(173, 65%, 41%) -0.02%,
+      hsl(214, 51%, 47%) 85.16%
+    );
+    filter: none;
+  }
+  .outline-claro {
+    color: hsl(210, 33%, 99%);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    background-image: linear-gradient(hsl(226, 80%, 14%), hsl(226, 80%, 14%)),
+      linear-gradient(90deg, hsl(173, 65%, 41%) -0.02%, hsl(214, 51%, 47%));
+    border: 2px solid transparent !important;
+    filter: none;
+  }
+  .outline-claro:hover {
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    background-image: linear-gradient(hsl(226, 80%, 14%), hsl(226, 80%, 14%)),
+      linear-gradient(90deg, hsl(173, 65%, 41%) -0.02%, hsl(214, 51%, 47%));
+    border: 2px solid transparent !important;
+  }
+  .outline-escuro {
+    color: var(--clr-blue);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    background-image: linear-gradient(hsl(210, 33%, 99%), hsl(210, 33%, 99%)),
+      linear-gradient(90deg, hsl(173, 65%, 41%) -0.02%, hsl(214, 51%, 47%));
+    border: 2px solid transparent !important;
+    filter: none;
+  }
+  .outline-escuro:hover {
+    color: hsl(210, 33%, 99%);
+    background: var(--clr-blue);
+    filter: none;
+  }
+  .grande {
+    padding: 1.1rem 1.6rem;
+    font-size: clamp(0.9rem, 1.2vw, 1rem);
+  }
+  .pequeno {
+    padding: 0.8rem 0.8rem;
+    font-size: clamp(0.9rem, 1.2vw, .8rem);;
+  }
+  .video {
+    padding: 0.8rem 0.8rem;
+    color: var(--clr-blue);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    background-image: linear-gradient(hsl(210, 33%, 99%), hsl(210, 33%, 99%)),
+      linear-gradient(90deg, hsl(173, 65%, 41%) -0.02%, hsl(214, 51%, 47%));
+    /* background: transparent; */
+    border: 2px solid transparent !important;
+    filter: none;
+  }
+  .video:hover {
+    color: hsl(210, 33%, 99%);
+    background: var(--clr-blue);
+    filter: none;
+  }
+  @media screen and (min-width: 425px) {
+    a {
+      width: max-content;
+    }
+  }
+</style>

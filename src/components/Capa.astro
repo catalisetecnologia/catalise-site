@@ -1,0 +1,130 @@
+---
+import Botao from "./Botao.astro";
+
+const { id, estilo, title, destaque, botao, link, linha } = Astro.props;
+---
+
+<section id={id} class={estilo && estilo}>
+  <div>
+    <h1>
+      {title}
+      {linha && <br />}
+      {destaque && <span class="destaque">{destaque}</span>}
+    </h1>
+    <slot name="conteudo" />
+    {
+      botao && !estilo ? (
+        <Botao estilo="grande mt-3" texto={botao} link={link} />
+      ) : botao && estilo ? (
+        <Botao estilo="claro grande mt-3" texto={botao} link={link} />
+      ) : null
+    }
+  </div>
+  <div class="capa">
+    <slot name="imagem" />
+  </div>
+</section>
+
+<style scoped>
+  section {
+    display: flex;
+    place-items: center;
+    place-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    z-index: 2;
+  }
+  h1 {
+    font-family: var(--font-black);
+    text-transform: uppercase;
+    margin-bottom: 1.1rem;
+  }
+  .capa-page {
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+  .capa {
+    filter: drop-shadow(-4rem -4rem 6rem hsl(215, 100%, 30%))
+      drop-shadow(4rem 4rem 6rem hsl(195, 100%, 24%));
+
+    z-index: -1;
+  }
+  .destaque {
+    font-size: clamp(2.3rem, 3.7vw, 3.5rem);
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 0.15rem var(--clr-yellow);
+  }
+  .claro {
+    position: relative;
+    background: linear-gradient(
+      80deg,
+      hsl(226, 100%, 97%),
+      hsl(200, 100%, 80%)
+    );
+    border-radius: 2rem;
+    color: var(--clr-black);
+    width: calc(78vw - 2rem);
+    padding: 3rem 3rem;
+    filter: drop-shadow(-4rem -4rem 6rem hsl(215, 100%, 30%))
+      drop-shadow(4rem 4rem 6rem hsl(195, 100%, 24%));
+    overflow: hidden;
+    z-index: 1;
+  }
+  .claro > div:first-child {
+    width: auto;
+  }
+  .claro h1 {
+    font-size: clamp(1.9rem, 4vw, 2.8rem);
+    text-transform: none;
+  }
+  .claro p {
+    font-family: var(--font-light);
+    font-weight: 600;
+  }
+  .claro span {
+    font-size: 2.8rem;
+    color: var(--clr-black);
+    -webkit-text-stroke: 0;
+  }
+  .claro .capa {
+    filter: none;
+    position: relative;
+  }
+  @media screen and (min-width: 768px) {
+    .capa-page {
+      flex-direction: row;
+      margin: 1.5rem 0;
+    }
+    .claro > div:first-child {
+      width: clamp(24rem, 40vw, 35rem);
+    }
+    section {
+      flex-direction: row;
+    }
+    .claro {
+      width: -webkit-fill-available;
+    }
+    .claro .capa {
+      display: unset;
+      position: absolute;
+      bottom: 0;
+      right: -6rem;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .claro {
+      padding: 5rem 6rem;
+      width: clamp(20rem, 80vw, 75rem);
+    }
+    .claro .capa {
+      display: unset;
+      height: auto;
+      left: clamp(0rem, 40vw, 40rem);
+    }
+    .links a {
+      display: inline-block;
+      padding: 15px 20px;
+    }
+  }
+</style>

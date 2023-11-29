@@ -1,0 +1,316 @@
+---
+import { Image } from "astro:assets";
+
+import Layout from "../layouts/Layout.astro";
+import Capa from "../components/Capa.astro";
+import Section from "../components/Section.astro";
+import Tabs from "../components/Tabs.astro";
+
+import capa from "../img/capa catalise.png";
+---
+
+<Layout title="sobre" description="Nossa historia">
+  <main class="container">
+    <Capa
+      title="Nosso sonho"
+      linha="true"
+      destaque=" sua aprovação"
+      estilo="capa-page"
+    >
+      <p class="txt-capa" slot="conteudo">
+        O Catálise é um Curso Pré-Vestibular Online de Alto desempenho e baixo
+        custo criado por dois Iteanos com base em um sonho:<b>
+          Que qualquer estudante possa passar na prova dos sonhos independente
+          de classe social e local de moradia.</b
+        >
+      </p>
+      <Image src={capa} alt="Capa do Catálise" class="img-capa" slot="imagem" />
+    </Capa>
+    <Section
+      estilo="centro"
+      tag="Metodologia Catálise"
+      titulo="Como transformamos sonhos em realidade "
+    >
+      <Tabs />
+    </Section>
+    <Capa
+      estilo="claro"
+      title="Desvende os segredos da aprovação"
+      botao="Conheça nossas turmas"
+    >
+      <p slot="conteudo">
+        <b>
+          Aqui no Catálise você aprenderá tudo o que precisa para a sua
+          aprovação, você aprenderá como estudar com alto desempenho como fazer
+          provas e todos os assuntos para sua aprovação.
+        </b>
+      </p>
+      <Image
+        src={capa}
+        alt="Capa do Catálise"
+        class="img-capa-material"
+        slot="imagem"
+        width="770"
+        quality="max"
+      />
+    </Capa>
+    <Section
+      estilo="centro"
+      tag="Nossa história"
+      titulo="Conheça um pouco da nossa história"
+      subtitulo="000000 000000 0000000 0000000 000000 000000 0000000 00000 00000 000000 000000 00000 0000 00000"
+    >
+      <section class="design-section">
+        <div class="timeline">
+          <div class="timeline-empty"></div>
+          <div class="timeline-middle">
+            <div class="timeline-circle"></div>
+          </div>
+          <div class="timeline-component timeline-content">
+            <img src="/imagens/itaime fundo.png" alt="metodologia" />
+            <div class="texto">
+              <span>2021</span>
+              <h1>Mentoria para o ITA</h1>
+              <p>
+                Em janeiro de 2021 o iniciamos a mentoria do catálise, um
+                programa de acompanhamento de alunos que sonhavam com ITA mas
+                que ainda não sabiam o caminho para a aprovação. Queríamos criar
+                nossa turma ITA, e esse foi o primeiro passo. Não demorou muito
+                e já tínhamos além da mentoria, listas de exercícios e
+                simulados.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-component timeline-content">
+            <div class="texto">
+              <span>2021</span>
+              <h1>Revisão para o ITA</h1>
+              <p>
+                No segundo semestre de 2021 lançamos nossa primeira revisão para
+                o ITA, já com a revisão teórica gravada dos principais assuntos
+                que são cobrados pelo ITA.
+              </p>
+            </div>
+            <img src="/imagens/itaime fundo.png" alt="metodologia" />
+          </div>
+          <div class="timeline-middle">
+            <div class="timeline-circle"></div>
+          </div>
+          <div class="timeline-empty"></div>
+          <div class="timeline-empty"></div>
+          <div class="timeline-middle">
+            <div class="timeline-circle"></div>
+          </div>
+          <div class="timeline-component timeline-content">
+            <img src="/imagens/itaime fundo.png" alt="metodologia" />
+            <div class="texto">
+              <span>2021</span>
+              <h1>Primeira Aprovação</h1>
+              <p>
+                Já ao final do nosso primeiro ano de mentoria conquistamos a
+                nossa primeira aprovação no vestibular do ITA, apontando que
+                estávamos seguindo em um bom caminho de preparação dos nossos
+                alunos.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-component timeline-content">
+            <div class="texto">
+              <span>2022</span>
+              <h1>Turma ITA</h1>
+              <p>
+                No início de 2022 lançamos nossa Turma ITA completa, com aulas
+                de todas as matérias cobradas pelo edital do ITA, já com aulas
+                gravadas utilizando a Metodologia Microlearning, simulados
+                focados no ITA e muito mais.
+              </p>
+            </div>
+            <img src="/imagens/itaime fundo.png" alt="metodologia" />
+          </div>
+          <div class="timeline-middle">
+            <div class="timeline-circle"></div>
+          </div>
+          <div class="timeline-empty"></div>
+          <div class="timeline-empty"></div>
+          <div class="timeline-middle">
+            <div class="timeline-circle"></div>
+          </div>
+          <div class="timeline-component timeline-content">
+            <img src="/imagens/itaime fundo.png" alt="metodologia" />
+            <div class="texto">
+              <span>2022</span>
+              <h1>Aprovações no ITA e IME</h1>
+              <p>
+                Já ao final do nosso primeiro ano de mentoria conquistamos a
+                nossa primeira aprovação no vestibular do ITA, apontando que
+                estávamos seguindo em um bom caminho de preparação dos nossos
+                alunos.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-component timeline-content">
+            <div class="texto">
+              <span>2023</span>
+              <h1>Turma ITA-IME</h1>
+              <p>
+                No início de 2023 consolidamos nossa Turma ITA e expandimos a
+                abrangência dos assuntos para assuntos que são cobrados
+                especificamente no IME. Além disso trouxemos inovações para o
+                curso com feedbacks personalizados dos simulados e expandimos a
+                quantidade de mentorias, aulas Ao Vivo e introduzimos as rodas
+                de conversa com Psicóloga
+              </p>
+            </div>
+            <img src="/imagens/itaime fundo.png" alt="metodologia" />
+          </div>
+          <div class="timeline-middle">
+            <div class="timeline-circle"></div>
+          </div>
+          <div class="timeline-empty"></div>
+          <div class="timeline-empty"></div>
+          <div class="timeline-middle">
+            <div class="timeline-circle"></div>
+          </div>
+          <div class="timeline-component timeline-content">
+            <img src="/imagens/itaime fundo.png" alt="metodologia" />
+            <div class="texto">
+              <span>2023</span>
+              <h1>Aprovações no ITA e IME</h1>
+              <p>
+                Ao final do nosso segundo como curso completo já conquistamos 22
+                aprovações na primeira fase do ITA e 24 aprovações na primeira
+                fase do IME
+              </p>
+            </div>
+          </div>
+          <div class="timeline-component timeline-content">
+            <div class="texto">
+              <span>2024</span>
+              <h1>Chegada de mais Inovações</h1>
+              <p>
+                2024 está chegando e temos muitas novidades chegando por aí mas
+                que ainda são segredo. Novas turmas, inovações tecnológicas e
+                muito mais. Acompanhe o Catálise Vestibulares.
+              </p>
+            </div>
+            <img src="/imagens/itaime fundo.png" alt="metodologia" />
+          </div>
+          <div class="timeline-middle">
+            <div class="timeline-circle"></div>
+          </div>
+          <div class="timeline-empty"></div>
+          <div class="timeline-empty"></div>
+          <div class="timeline-middle">
+            <div class="timeline-circle"></div>
+          </div>
+          <div class="timeline-component timeline-content">
+            <img src="/imagens/itaime fundo.png" alt="metodologia" />
+            <div class="texto">
+              <span>2021</span>
+              <h1>Primeira Aprovação</h1>
+              <p>
+                Já ao final do nosso primeiro ano de mentoria conquistamos a
+                nossa primeira aprovação no vestibular do ITA, apontando que
+                estávamos seguindo em um bom caminho de preparação dos nossos
+                alunos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </Section>
+  </main>
+</Layout>
+
+<script></script>
+<style scoped>
+  .design-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 0;
+  }
+
+  .design {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .timeline {
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .timeline-content {
+    color: white;
+    transition: 0.4s ease;
+    overflow-wrap: break-word !important;
+    margin: 1rem;
+  }
+
+  .timeline-component {
+    margin: 0 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .timeline-component img {
+    width: 50%;
+    border-radius: 1rem;
+  }
+  .timeline-component .texto {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+  }
+  .timeline-component .texto span {
+    color: var(--clr-yellow);
+    font-family: var(--font-bold);
+  }
+  .timeline-component .texto h1 {
+    font-family: var(--font-bold);
+    font-size: 2rem;
+    margin: 1rem 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    .timeline {
+      display: grid;
+      grid-template-columns: 1fr 3px 1fr;
+    }
+    .timeline-middle {
+      position: relative;
+      background: var(--clr-lblue);
+      width: 3px;
+      height: 100%;
+    }
+    .main-middle {
+      opacity: 0;
+    }
+    .timeline-circle {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: var(--clr-green);
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+    }
+    .timeline-component {
+      flex-direction: row;
+    }
+    .timeline-component .texto {
+      width: 50%;
+    }
+  }
+</style>

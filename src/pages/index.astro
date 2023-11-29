@@ -1,0 +1,121 @@
+---
+import { getEntry } from "astro:content";
+
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+
+import Capa from "../components/Capa.astro";
+import Destaques from "../components/Destaques.astro";
+import Section from "../components/Section.astro";
+import CardTurmas from "../components/CardTurmas.astro";
+import CardEbooks from "../components/CardEbooks.astro";
+import CardAprovacoes from "../components/CardAprovacoes.astro";
+import CardDepoimentos from "../components/CardDepoimentos.astro";
+
+import capa from "../img/turma itaime.png";
+import venha from "../img/capa catalise.png";
+
+const turmas = await getEntry("produtos", "turmas");
+const materiais = await getEntry("produtos", "materiais");
+const depoimentos = await getEntry("alunos", "depoimentos");
+const aprovados = await getEntry("alunos", "aprovados");
+const destaques = await getEntry("produtos", "destaques");
+---
+
+<Layout title="Catálise" description="Catálise cursos">
+  <main class="container">
+    <div class="testeGsap">
+      <div class="box green"></div>
+      <div class="box purple"></div>
+      <div class="box orange"></div>
+    </div>
+    <Capa
+      title="Turma"
+      destaque=" ITA-IME"
+      botao="Quero me matricular"
+      link="/produtos/ita-ime"
+      estilo="capa-page"
+    >
+      <p class="txt-capa" slot="conteudo">
+        Descubra o caminho da aprovação com nossa turma ITA-IME! Aqui você vai
+        aprender tudo o que precisa para conquistar os seus sonhos!
+      </p>
+      <Image src={capa} alt="Capa do Catálise" class="img-capa" slot="imagem" />
+    </Capa>
+    <Destaques destaques={destaques} page="home" />
+    <Section
+      estilo="claro"
+      tag="Turmas"
+      titulo="Prepare-se nas melhores turmas"
+      subtitulo="Embarque conosco nesta jornada de preparação, do nível básico ao avançado. Vamos juntos rumo a sua aprovação!"
+      botao="Conheça nossas turmas"
+      link="/produtos"
+    >
+      <CardTurmas estilo="grande" turmas={turmas} page="principal" swiper />
+    </Section>
+    <Section
+      estilo="centro"
+      tag="Materiais"
+      titulo="Os melhores materiais para sua preparação"
+      subtitulo=""
+      colunas="col3"
+    >
+      <CardEbooks materiais={materiais} page="principal" />
+    </Section>
+    <Section
+      estilo="claro aprovacoes"
+      tag="Aprovações"
+      titulo="Conheça nossos aprovados no ITA"
+      subtitulo="Assista as inspiradoras jornadas de nossos alunos aprovados no ITA. Eles acreditaram no sonho, perseveraram e conquistaram o topo. O próximo pode ser você!"
+    >
+      <CardAprovacoes aprovados={aprovados} page="" />
+    </Section>
+    <Capa
+      title="Faça parte"
+      destaque=" do Catálise!"
+      botao="Conheça nossos produtos"
+      link="/produtos"
+      estilo="capa-page"
+      linha
+    >
+      <p class="txt-capa" slot="conteudo">
+        Junte-se aos nosso aprovados no melhor preparatório online para os
+        processos seletivos do ITA, IME e EEAR!
+      </p>
+      <Image src={venha} alt="Catálise" class="img-capa" slot="imagem" />
+    </Capa>
+    <Section
+      estilo="claro"
+      tag="Depoimentos"
+      titulo="Compartilhe a experiência dos nossos alunos"
+      subtitulo="Descubra as transformações incríveis que o Catálise trouxe para a vida de nossos alunos e como nossa metodologia de ensino fez a diferença em suas jornadas."
+    >
+      <div class="depoimentos">
+        <CardDepoimentos depoimentos={depoimentos} page="" />
+      </div>
+    </Section>
+  </main>
+</Layout>
+
+<script>
+  import { gsap } from "gsap";
+  gsap.fromTo(
+    ".box",
+    {
+      backgroundColor: "cyan",
+      scale: 0,
+    },
+    {
+      backgroundColor: "blue",
+      duration: 1,
+      repeat: -1,
+      yoyo: true,
+      scale: 1,
+    }
+  );
+</script>
+<style>
+  .testeGsap {
+    display: none;
+  }
+</style>

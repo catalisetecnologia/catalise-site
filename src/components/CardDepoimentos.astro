@@ -1,0 +1,123 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { Image } from "astro:assets";
+
+interface Props {
+  depoimentos: CollectionEntry<"alunos">;
+  page: string;
+}
+
+const { depoimentos, page } = Astro.props;
+---
+
+{
+  (
+    <div class="swiper swiper-depoimentos">
+      <div class="swiper-wrapper">
+        {depoimentos.data.content.map((depoimento) => (
+          <div class="swiper-slide">
+            <div class="aluno">
+              <Image
+                src={depoimento.foto}
+                alt={depoimento.nome}
+                width="120"
+                height="90"
+              />
+              <div>
+                <span>{depoimento.nome}</span>
+                <span>{depoimento.sobre}</span>
+              </div>
+            </div>
+            <p>{depoimento.depoimento}</p>
+          </div>
+        ))}
+      </div>
+      <div class="swiper-paginations">
+        <div class="swiper-pagination" />
+      </div>
+    </div>
+  )
+}
+
+<script>
+  import { Swiper } from "swiper";
+  import { Pagination, EffectCards } from "swiper/modules";
+  import "swiper/css";
+  import "swiper/css/pagination";
+  import "swiper/css/effect-cards";
+  import { fade } from "astro:transitions";
+
+  new Swiper(".swiper-depoimentos", {
+    modules: [Pagination, EffectCards],
+    effect: "cards",
+    cardsEffect: {
+      perSlideOffset: 1,
+      perSlideRotate: 0,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      1026: {
+        cardsEffect: {
+          perSlideOffset: 6,
+          perSlideRotate: 1,
+          rotate: true,
+        },
+      },
+    },
+  });
+</script>
+<style scoped>
+  .swiper-depoimentos {
+    width: 80vw;
+    height: auto;
+  }
+  .swiper-slide {
+    background: var(--clr-ice);
+    width: -webkit-fill-available !important;
+    padding: 2rem;
+    place-self: center;
+    border-radius: 1rem;
+    box-shadow: 0.5rem 0.5rem 1.2rem -0.6rem rgba(0, 0, 0, 0.15);
+  }
+  .aluno {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    text-align: center;
+    gap: 1.4rem;
+    border-bottom: 0.1rem solid var(--clr-dblue);
+    padding-bottom: 1.6rem;
+  }
+  .aluno div span:first-child {
+    font-family: var(--font-bold);
+    font-size: clamp(0.9rem, 1.2vw, 1.2rem);
+    line-height: 2;
+  }
+  .aluno div {
+    display: flex;
+    flex-direction: column;
+  }
+  .swiper-slide p {
+    font-family: var(--font-book);
+    padding-top: 1.6rem;
+  }
+  .swiper-paginations {
+    margin-top: 3rem;
+    z-index: 2;
+  }
+  @media screen and (min-width: 768px) {
+    .aluno {
+      flex-direction: row;
+      place-items: center;
+      text-align: start;
+    }
+  }
+  @media screen and (min-width: 1026px) {
+    .swiper-depoimentos {
+      width: clamp(20rem, 43vw, 40rem);
+    }
+  }
+</style>
