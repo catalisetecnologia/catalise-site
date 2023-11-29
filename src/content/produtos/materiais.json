@@ -2,42 +2,42 @@
   "content": [
     {
       "img": "../../img/materiais-card/ebook biblia para o ita.png",
-      "tag": "Ebook",
+      "tag": "Manual",
       "nome": "A Biblia para o ITA",
       "link": "/produtos/biblia-ita",
       "page": ["principal"]
     },
     {
       "img": "../../img/materiais-card/ebook bizuario fisico quimica.png",
-      "tag": "Bizuários",
+      "tag": "Bizuário",
       "nome": "Bizuários de Química",
       "link": "/produtos/bizuarios",
       "page": ["principal"]
     },
     {
       "img": "../../img/materiais-card/ebook miscelanea ita.png",
-      "tag": "Miscelânea",
+      "tag": "Miscelâneas",
       "nome": "Miscelânea ITA",
       "link": "/produtos/miscelaneas-ita",
       "page": ["principal", "MS-ITA"]
     },
     {
       "img": "../../img/materiais-card/ebook miscelanea ime.png",
-      "tag": "Miscelânea",
+      "tag": "Miscelâneas",
       "nome": "Miscelânea IME",
       "link": "/produtos/miscelaneas-ime",
       "page": ["principal", "MS-IME"]
     },
     {
       "img": "../../img/materiais-card/ebook miscelanea afa.png",
-      "tag": "Miscelânea",
+      "tag": "Miscelâneas",
       "nome": "Miscelânea AFA",
       "link": "/produtos/miscelaneas-afa",
       "page": ["principal", "MS-AFA"]
     },
     {
       "img": "../../img/materiais-card/ebook miscelanea eear.png",
-      "tag": "Miscelânea",
+      "tag": "Miscelâneas",
       "nome": "Miscelânea EEAR",
       "link": "/produtos/miscelaneas-eear",
       "page": ["principal", "MS-EEAR"]
@@ -72,70 +72,70 @@
     },
     {
       "img": "../../img/materiais-card/ebook miscelanea matematica ita.png",
-      "tag": "Miscelânea",
+      "tag": "Miscelâneas",
       "nome": "Matemática ITA",
       "link": "/produtos/miscelaneas-ita",
       "page": ["MS-ITA"]
     },
     {
       "img": "../../img/materiais-card/ebook miscelanea fisica ita.png",
-      "tag": "Miscelânea",
+      "tag": "Miscelâneas",
       "nome": "Física ITA",
       "link": "/produtos/miscelaneas-ita",
       "page": ["MS-ITA"]
     },
     {
       "img": "../../img/materiais-card/ebook miscelanea quimica ita.png",
-      "tag": "Miscelânea",
+      "tag": "Miscelâneas",
       "nome": "Química ITA",
       "link": "/produtos/miscelaneas-ita",
       "page": ["MS-ITA"]
     },
     {
       "img": "../../img/materiais-card/ebook miscelanea matematica ime.png",
-      "tag": "Miscelânea",
+      "tag": "Miscelâneas",
       "nome": "Matemática IME",
       "link": "/produtos/miscelaneas-ime",
       "page": ["MS-ITA"]
     },
     {
       "img": "../../img/materiais-card/ebook miscelanea fisica ime.png",
-      "tag": "Miscelânea",
+      "tag": "Miscelâneas",
       "nome": "Física IME",
       "link": "/produtos/miscelaneas-ime",
       "page": ["MS-IME"]
     },
     {
       "img": "../../img/materiais-card/ebook miscelanea quimica ime.png",
-      "tag": "Miscelânea",
+      "tag": "Miscelâneas",
       "nome": "Química IME",
       "link": "/produtos/miscelaneas-ime",
       "page": ["MS-IME"]
     },
     {
       "img": "../../img/materiais-card/ebook miscelanea matematica afa.png",
-      "tag": "Miscelânea",
+      "tag": "Miscelâneas",
       "nome": "Matemática AFA",
       "link": "/produtos/miscelaneas-afa",
       "page": ["MS-AFA"]
     },
     {
       "img": "../../img/materiais-card/ebook miscelanea fisica afa.png",
-      "tag": "Miscelânea",
+      "tag": "Miscelâneas",
       "nome": "Física AFA",
       "link": "/produtos/miscelaneas-afa",
       "page": ["MS-AFA"]
     },
     {
       "img": "../../img/materiais-card/ebook miscelanea matematica eear.png",
-      "tag": "Miscelânea",
+      "tag": "Miscelâneas",
       "nome": "Matemática EEAR",
       "link": "/produtos/miscelaneas-eear",
       "page": ["MS-EEAR"]
     },
     {
       "img": "../../img/materiais-card/ebook miscelanea fisica eear.png",
-      "tag": "Miscelânea",
+      "tag": "Miscelâneas",
       "nome": "Física EEAR",
       "link": "/produtos/miscelaneas-eear",
       "page": ["MS-EEAR"]
