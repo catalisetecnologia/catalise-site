@@ -9,7 +9,7 @@
     },
     {
       "img": "../../img/materiais-card/ebook bizuario fisico quimica.png",
-      "tag": "Bizuário",
+      "tag": "Bizuários",
       "nome": "Bizuários de Química",
       "link": "/produtos/bizuarios",
       "page": ["principal"]
@@ -17,28 +17,28 @@
     {
       "img": "../../img/materiais-card/ebook miscelanea ita.png",
       "tag": "Miscelâneas",
-      "nome": "Miscelânea ITA",
+      "nome": "Miscelâneas ITA",
       "link": "/produtos/miscelaneas-ita",
       "page": ["principal", "MS-ITA"]
     },
     {
       "img": "../../img/materiais-card/ebook miscelanea ime.png",
       "tag": "Miscelâneas",
-      "nome": "Miscelânea IME",
+      "nome": "Miscelâneas IME",
       "link": "/produtos/miscelaneas-ime",
       "page": ["principal", "MS-IME"]
     },
     {
       "img": "../../img/materiais-card/ebook miscelanea afa.png",
       "tag": "Miscelâneas",
-      "nome": "Miscelânea AFA",
+      "nome": "Miscelâneas AFA",
       "link": "/produtos/miscelaneas-afa",
       "page": ["principal", "MS-AFA"]
     },
     {
       "img": "../../img/materiais-card/ebook miscelanea eear.png",
       "tag": "Miscelâneas",
-      "nome": "Miscelânea EEAR",
+      "nome": "Miscelâneas EEAR",
       "link": "/produtos/miscelaneas-eear",
       "page": ["principal", "MS-EEAR"]
     },
