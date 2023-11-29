@@ -133,19 +133,20 @@ const perguntas = await getEntry("alunos", "perguntas");
           concorridos do país, incluindo o ITA - Instituto Tecnológico de
           Aeronáutica e IME- Instituto Militar de Engenharia.
         </p>
+        <Image
+          src={materiais}
+          alt="Capa do Catálise"
+          class="img-capa img-capa-material"
+          slot="imagem"
+        />
       </div>
-      <Image
-        src={materiais}
-        alt="Capa do Catálise"
-        class="img-capa img-capa-material"
-        slot="imagem"
-      />
     </Capa>
     <Capa
       title="Faça seu"
       linha="true"
       destaque=" agendamento"
       botao="Faça o seu agendamento!"
+      link="https://calendar.app.google/4DxuVx9iGpQgiTAk7"
     >
       <h1 class="valor" slot="conteudo">Sarah Muricy</h1>
       <ul class="capa-itens" slot="conteudo">
