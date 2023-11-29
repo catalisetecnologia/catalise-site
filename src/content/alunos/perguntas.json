@@ -437,7 +437,7 @@
     },
     {
       "title": "Há alguma restrição de cópias ou impressões?",
-      "text": "Você poderá imprimir o material para uso pessoal, mas não é permitido o compartilhamento das impressões ou do arquido PDF do E-book",
+      "text": "Você poderá imprimir o material para uso pessoal, mas não é permitido o compartilhamento das impressões ou do arquivo PDF do E-book",
       "page": ["BS"]
     },
     {
@@ -449,6 +449,51 @@
       "title": "Como faço para obter suporte técnico se tiver problemas com o ebook?",
       "text": "Se encontrar problemas técnicos ou precisar de suporte, entre em contato pelo e-mail contato@catalisevestibulares.com.br ou fala conosco pelo WhatsApp, basta clicar no ícone do site. Estamos aqui para ajudar a resolver quaisquer problemas que você possa enfrentar.",
       "page": ["BS"]
+    },
+    {
+      "title": "A Revisão EEAR do Catálise é presencial ou online?",
+      "text": "O Catálise trabalha com um método 100% online. Dessa forma, você vai poder estudar de onde quiser e quando quiser. Além disso, você não terá gastos consideráveis com transporte e alimentação fora de casa.",
+      "page": ["PARCERIAS"]
+    },
+    {
+      "title": "Quais são as formas de pagamento?",
+      "text": "Você poderá efetuar o pagamento da forma que achar melhor: cartão de crédito, no PIX, no boleto, em dois cartões ou uma parte no PIX e outra parte no cartão.",
+      "page": ["PARCERIAS"]
+    },
+    {
+      "title": "Qual é o prazo de Garantia? Existe alguma taxa de cancelamento do curso?",
+      "text": "Você pode cancelar, sem qualquer tipo de taxa, até 7 dias corridos após a confirmação do pagamento. Isso pode ser feito pelo próprio sistema de pagamento. Porém, recomendamos que acione a gente pelo nosso contato de suporte, para ajustar a situação da melhor forma possível. Após os 7 dias, não há como cancelar o valor pago, mesmo que ainda tenham parcelas a vencer no caso de pagamento com cartão de crédito.",
+      "page": ["PARCERIAS"]
+    },
+    {
+      "title": "Quando receberei o acesso ao curso?",
+      "text": "Após seu pagamento ser confirmado, você receberá em seu whatsapp o seu acesso a nossa plataforma e demais ferramentas.",
+      "page": ["PARCERIAS"]
+    },
+    {
+      "title": "Até quando terei acesso ao curso?",
+      "text": "Você terá acesso a todo o conteúdo da nossa Revisão EEAR até dezembro de 2024.",
+      "page": ["PARCERIAS"]
+    },
+    {
+      "title": "Posso acessar de um dispositivo móvel ou apenas pelo computador?",
+      "text": "Nossa plataforma pode ser acessada de qualquer dispositivo. Caso não consiga em algum específico, experimente mudar de navegador e/ou entre em contato com o nosso suporte.",
+      "page": ["PARCERIAS"]
+    },
+    {
+      "title": "Posso emprestar minha conta para um colega ou dividir acesso?",
+      "text": "Não. A conta é individual e restrita ao aluno que efetuou a matrícula no curso. Fazendo isso, você estará violando termos de uso e correrá o risco de perder o acesso ao curso. Além disso, nosso curso te proporciona todo uma acompanhamento de desempenho individualizado, o que perderia o sentido nessa situação, prejudicando seus resultados.",
+      "page": ["PARCERIAS"]
+    },
+    {
+      "title": "Sempre estudei em curso presencial. A Revisão EEAR online do Catálise serve para mim?",
+      "text": "O Catálise é um curso que além de entregar todas as aulas que você precisa para passar na EEAR possui diferenciais para que você se adapte o mais rápido possível. Você terá acesso a acompanhamento pedagógico, comunidade com os outros alunos, relatório com a análise do seu desempenho nas provas antigas e muito mais. Toda a tecnologia que o online pode proporcionar para que você acelere os seus estudos, assim a nossa revisão com certeza serve para você.",
+      "page": ["PARCERIAS"]
+    },
+    {
+      "title": "Eu já faço cursinho presencial. Ainda assim devo me matricular no Revisão EEAR?",
+      "text": "Com toda certeza! Você terá acesso a muitas ferramentas de suporte em seus estudos, como por exemplo contato com uma equipe de coordenação capacitada, mentorias em grupo, as provas antigas da EEAR separadas por assunto, provas antigas sem marcação, acesso a toda plataforma para você estudar onde e quando quiser, a comunidade VIP de alunos para tirar dúvidas e discutir exercícios e muito mais.",
+      "page": ["PARCERIAS"]
     }
   ]
 }

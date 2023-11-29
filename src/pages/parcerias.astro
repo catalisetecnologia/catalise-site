@@ -29,14 +29,17 @@ const perguntas = await getEntry("alunos", "perguntas");
         Ofereça aos seus alunos a oportunidade de conquistar um futuro brilhante
         com a parceria do nosso Curso Pré-Vestibular.
       </p>
+      <p class="txt-capa" slot="conteudo">
+        O Catálise é uma instituição de ensino online com experiência em
+        preparar estudantes para os vestibulares mais concorridos do país. Conta
+        com uma equipe de professores altamente qualificados e apaixonados por
+        ensinar. Tem obtido excelentes resultados conduzindo alunos à aprovação,
+        com 24 aprovados na primeira fase do ITA e 21 no IME.
+      </p>
       <Image src={capa} alt="Capa do Catálise" class="img-capa" slot="imagem" />
     </Capa>
     <Destaques destaques={destaques} page="PLANO-ESCOLAS" />
-    <Capa
-      estilo="claro"
-      title="00000000 00 0000 0000000 00 0000"
-      texto=""
-    >
+    <Capa estilo="claro" title="Transformando sonhos em conquistas  " texto="">
       <ul class="capa-itens" slot="conteudo">
         <li>
           <svg
@@ -49,7 +52,7 @@ const perguntas = await getEntry("alunos", "perguntas");
               d="M122.35 55.45c12.87 7.23 12.87 25.87 0 33.1L28 141.57c-12.55 7.05-28-2.08-28-16.55V18.98C0 4.51 15.45-4.62 28 2.43l94.35 53.02Z"
               opacity=".7"></path>
           </svg>
-           0000 0000 0000 0000
+           Instituto Tecnológico de Aeronáutica (ITA)
         </li>
         <li>
           <svg
@@ -62,7 +65,7 @@ const perguntas = await getEntry("alunos", "perguntas");
               d="M122.35 55.45c12.87 7.23 12.87 25.87 0 33.1L28 141.57c-12.55 7.05-28-2.08-28-16.55V18.98C0 4.51 15.45-4.62 28 2.43l94.35 53.02Z"
               opacity=".7"></path>
           </svg>
-           0000 0000 0000 0000
+           Instituto Militar de Engenharia (IME)
         </li>
         <li>
           <svg
@@ -75,7 +78,7 @@ const perguntas = await getEntry("alunos", "perguntas");
               d="M122.35 55.45c12.87 7.23 12.87 25.87 0 33.1L28 141.57c-12.55 7.05-28-2.08-28-16.55V18.98C0 4.51 15.45-4.62 28 2.43l94.35 53.02Z"
               opacity=".7"></path>
           </svg>
-           0000 0000 0000 0000
+           Academia da Força Aérea (AFA)
         </li>
         <li>
           <svg
@@ -88,7 +91,20 @@ const perguntas = await getEntry("alunos", "perguntas");
               d="M122.35 55.45c12.87 7.23 12.87 25.87 0 33.1L28 141.57c-12.55 7.05-28-2.08-28-16.55V18.98C0 4.51 15.45-4.62 28 2.43l94.35 53.02Z"
               opacity=".7"></path>
           </svg>
-           0000 0000 0000 0000
+           Escola de Especialistas da Aeronáutica (EEAR)
+        </li>
+        <li>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 132 144"
+          >
+            <path
+              fill="#77DCF8"
+              d="M122.35 55.45c12.87 7.23 12.87 25.87 0 33.1L28 141.57c-12.55 7.05-28-2.08-28-16.55V18.98C0 4.51 15.45-4.62 28 2.43l94.35 53.02Z"
+              opacity=".7"></path>
+          </svg>
+           Outros vestibulares
         </li>
       </ul>
       <Image
@@ -103,23 +119,20 @@ const perguntas = await getEntry("alunos", "perguntas");
     <Section
       estilo="centro"
       colunas="col4"
-      tag="00000"
-      titulo="0000 0000 00 0000"
-      subtitulo="0000 00 0000 000 0000 00 0000 00 00000 000 0000 000 0000 000 00 0000 00 0000 0000 00 00 0000"
+      tag="Planos"
+      titulo="Formas de Parceria"
+      subtitulo="Trabalhamos com dois modelos de parcerias com escolas para impulsionar a aprovação em vestibulares"
     >
-      <Cardserv serv={serv} page="PLANO-ESCOLAS" />
+      <!-- <Cardserv serv={serv} page="PLANO-ESCOLAS" /> -->
     </Section>
-    <Capa estilo="claro" title="000000 00000">
+    <Capa estilo="claro" title="Material didático">
       <div slot="conteudo">
         <p class="txt-capa-claro">
-            0000 00 0000 000 0000 00 0000 00 00000 000 0000 000 0000 000 00 0000 00 0000 0000 00 00 0000
+          O nosso Plano Escolas é uma solução sob medida para impulsionar o
+          desempenho dos seus alunos e prepará-los para os vestibulares mais
+          concorridos do país, incluindo o ITA - Instituto Tecnológico de
+          Aeronáutica e IME- Instituto Militar de Engenharia.
         </p>
-        <ul class="mt-2">
-          <li>0000 00 0000 000 0000 </li>
-          <li>0000 00 0000 000 0000 </li>
-          <li>0000 00 0000 000 0000 </li>
-          <li>0000 00 0000 000 0000 </li>
-        </ul>
       </div>
       <Image
         src={materiais}
@@ -129,55 +142,61 @@ const perguntas = await getEntry("alunos", "perguntas");
       />
     </Capa>
     <Capa
-      title="Garanta"
+      title="Faça seu"
       linha="true"
-      destaque=" sua Vaga!"
-      botao="Matricule-se agora!"
+      destaque=" agendamento"
+      botao="Faça o seu agendamento!"
     >
-      <p class="txt-capa" slot="conteudo">
-        Aproveite a oportunidade de ter a melhor preparação para o ITA e IME..
-      </p>
+      <h1 class="valor" slot="conteudo">Sarah Muricy</h1>
       <ul class="capa-itens" slot="conteudo">
         <li>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 480 480"
+          <a href="tel:+5512988816588">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 480 480"
+            >
+              <path
+                fill="#fff"
+                d="M352 16H128a32 32 0 0 0-32 32v384a32 32 0 0 0 32 32h224a32 32 0 0 0 32-32V48a32 32 0 0 0-32-32Zm-72 16a8 8 0 1 1 0 16 8 8 0 0 1 0-16Zm-64 0h32a8 8 0 0 1 0 16h-32a8 8 0 0 1 0-16Zm136 400H128V48h48l6.62 6.62c6 6 14.15 9.38 22.63 9.38h69.49a32 32 0 0 0 22.62-9.38L304 48h48v384Z"
+              ></path>
+            </svg>
+             (12) 98881 6588</a
           >
-            <path
-              fill="#fff"
-              d="M111.69 47.84a16 16 0 0 0-11 4.85l-62.6 62.6a16.01 16.01 0 0 0 .03 25.46l62.57 62.56a16.01 16.01 0 1 0 22.62-22.62L86.62 144H304c62.04 0 112 49.96 112 112s-49.96 112-112 112h-64a16.02 16.02 0 0 0-11.46 27.4A16.02 16.02 0 0 0 240 400h64c73.67 0 132.4-56.52 140.75-128H448v-16c0-79.34-64.66-144-144-144H86.62l36.7-36.69a16 16 0 0 0-11.63-27.47ZM48 368a16 16 0 1 0 0 32 16 16 0 0 0 0-32Zm64 0a16 16 0 1 0 0 32 16 16 0 0 0 0-32Zm64 0a16 16 0 1 0 0 32 16 16 0 0 0 0-32Z"
-            ></path>
-          </svg>
-           Garantimos seu dinheiro de volta por até 7 dias
         </li>
         <li>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 480 480"
+          <a href="mailto:contato@catalisevestibulares.com.br">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 500 500"
+            >
+              <path
+                fill="#fff"
+                d="M55 70c-24.8 0-45 20.2-45 45v4.26L250 290l240-170.74V115c0-24.8-20.2-45-45-45H55Zm8.52 20h372.92L250 220 63.52 90ZM10 140.27V385c0 24.8 20.2 45 45 45h390c24.8 0 45-20.2 45-45V140.27l-60 42.7V410H70V182.97l-60-42.7Z"
+              ></path>
+            </svg>
+             contato@catalisevestibulares.com.br</a
           >
-            <path
-              fill="#fff"
-              d="M352 16H128a32 32 0 0 0-32 32v384a32 32 0 0 0 32 32h224a32 32 0 0 0 32-32V48a32 32 0 0 0-32-32Zm-72 16a8 8 0 1 1 0 16 8 8 0 0 1 0-16Zm-64 0h32a8 8 0 0 1 0 16h-32a8 8 0 0 1 0-16Zm136 400H128V48h48l6.62 6.62c6 6 14.15 9.38 22.63 9.38h69.49a32 32 0 0 0 22.62-9.38L304 48h48v384Z"
-            ></path>
-          </svg>
-           Estude do seu jeito e em qualquer dispositivo
         </li>
+        <Image
+          src={capa}
+          alt="Capa do Catálise"
+          class="img-capa"
+          slot="imagem"
+        />
       </ul>
-      <h1 class="valor" slot="conteudo">R$ 1.997,00</h1>
-      <Image src={capa} alt="Capa do Catálise" class="img-capa" slot="imagem" />
+      <Section estilo="claro centro" tag="" titulo="Perguntas frequentes">
+        <Accordeon perguntas={perguntas} estilo="grande" page="PARCERIAS" />
+      </Section>
     </Capa>
-    <Section estilo="claro centro" tag="" titulo="Perguntas frequentes">
-      <Accordeon perguntas={perguntas} estilo="grande" page="" />
-    </Section>
-  </main>
 
-  <style scoped>
-    .valor {
-      font-family: var(--font-black);
-      color: var(--clr-yellow);
-      margin-top: 2.4rem;
-    }
-  </style>
+    <style scoped>
+      .valor {
+        font-family: var(--font-black);
+        color: var(--clr-yellow);
+        margin-top: 2.4rem;
+      }
+    </style>
+  </main>
 </Layout>

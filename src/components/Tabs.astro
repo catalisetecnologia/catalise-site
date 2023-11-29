@@ -1,5 +1,9 @@
 ---
-
+import { Image } from "astro:assets";
+import Microlearning from "../img/turma itaime.png";
+import Trilhadidática from "../img/turma itaime.png";
+import EstudoPersonalizado from "../img/turma itaime.png";
+import AcompanhamentoHumanizado from "../img/turma itaime.png";
 ---
 
 <div class="wrapper">
@@ -13,7 +17,12 @@
 
     <div class="tabs__panels flow">
       <div id="metodologia01" aria-labelledby="tab-1">
-        <img src="/imagens/itaime fundo.png" alt="metodologia" />
+        <Image
+          src={Microlearning}
+          alt="Capa do Catálise"
+          class="img-capa"
+          slot="imagem"
+        />
         <div class="texto">
           <h1>Microlearning</h1>
           <p>
@@ -29,7 +38,12 @@
         </div>
       </div>
       <div id="metodologia02" aria-labelledby="tab-2">
-        <img src="/imagens/itaime fundo.png" alt="metodologia" />
+        <Image
+          src={Trilhadidática}
+          alt="Capa do Catálise"
+          class="img-capa"
+          slot="imagem"
+        />
         <div class="texto">
           <h1>Trilha didática</h1>
           <p>
@@ -41,7 +55,12 @@
         </div>
       </div>
       <div id="metodologia03" aria-labelledby="tab-3">
-        <img src="/imagens/itaime fundo.png" alt="metodologia" />
+        <Image
+          src={EstudoPersonalizado}
+          alt="Capa do Catálise"
+          class="img-capa"
+          slot="imagem"
+        />
         <div class="texto">
           <h1>Estudo Personalizado</h1>
           <p>
@@ -53,7 +72,12 @@
         </div>
       </div>
       <div id="metodologia04" aria-labelledby="tab-4">
-        <img src="/imagens/itaime fundo.png" alt="metodologia" />
+        <Image
+          src={AcompanhamentoHumanizado}
+          alt="Capa do Catálise"
+          class="img-capa"
+          slot="imagem"
+        />
         <div class="texto">
           <h1>Acompanhamento Humanizado</h1>
           <p>
