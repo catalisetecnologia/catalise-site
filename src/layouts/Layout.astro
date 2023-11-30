@@ -37,7 +37,7 @@ const { title, description } = Astro.props;
     <slot />
     <Footer />
     <a
-      href="https://api.whatsapp.com/send?phone=5512988231606&text=Ol%C3%A1!%20Gostaria%20de%20ajuda"
+      href="https://api.whatsapp.com/send?phone=5512997364916&text=Ol%C3%A1!%20Gostaria%20de%20ajuda"
       class="contato"
     >
       <p>Precisa de ajuda?</p>
@@ -132,8 +132,6 @@ https://www.onlinewebfonts.com/search?q=GothamSSm
     --swiper-scrollbar-drag-bg-color: var(--clr-blue);
     --swiper-pagination-color: var(--clr-green);
     --swiper-pagination-bullet-active-color: var(--clr-green);
-    --swiper-pagination-bullet-inactive-opacity: 0.4;
-    --swiper-pagination-bullet-inactive-color: var(--clr-dgreen);
   }
   .swiper-pagination-bullet-active {
     width: 2rem;
@@ -161,7 +159,6 @@ https://www.onlinewebfonts.com/search?q=GothamSSm
     margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden;
   }
   main {
     display: flex;
@@ -279,8 +276,7 @@ https://www.onlinewebfonts.com/search?q=GothamSSm
   }
   .img-capa {
     width: clamp(20rem, 60vw, 40rem);
-    height: -webkit-fill-available;
-    object-fit: contain;
+    height: auto;
   }
   .img-capa-material {
     position: relative;
@@ -288,7 +284,7 @@ https://www.onlinewebfonts.com/search?q=GothamSSm
     width: 26rem;
     height: auto;
     margin-bottom: -5rem;
-    margin-right: 0rem;
+    margin-right: -10rem;
   }
   .img-capa-valor {
     display: none;
@@ -349,7 +345,7 @@ https://www.onlinewebfonts.com/search?q=GothamSSm
     font-family: var(--font-bold);
     font-size: clamp(1.3rem, 2vw, 1.8rem);
     color: var(--font-black);
-    margin: 1rem 0;
+    margin: 0.12rem 0;
   }
   .modal__content h2 {
     font-family: var(--font-book);
@@ -378,11 +374,6 @@ https://www.onlinewebfonts.com/search?q=GothamSSm
     text-decoration: none !important;
     color: var(--clr-lblue) !important;
     border: 0.12rem solid var(--clr-lblue) !important;
-  }
-  .modal-youtube {
-    width: -webkit-fill-available;
-    height: 30rem;
-    border-radius: 1rem;
   }
   .card {
     border: none !important;
