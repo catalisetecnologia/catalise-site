@@ -16,7 +16,7 @@ import Accordeon from "../../components/Accordeon.astro";
 import Cardserv from "../../components/Cardserv.astro";
 import CardDepoimentos from "../../components/CardDepoimentos.astro";
 
-import capa from "../../img/turma itaime.png";
+import capa from "../../img/turma ita.png";
 import beneficios from "../../img/beneficios-3.png";
 import materiais from "../../img/materiais.png";
 
@@ -44,9 +44,9 @@ const serv = await getEntry("produtos", "serv");
       estilo="capa-page"
     >
       <p class="txt-capa" slot="conteudo">
-        Aproveite a reta final do vestibular do EEAR para construir o diferencial
-        da sua aprovação. Aqui você vai encontrar tudo o que precisa para fazer
-        uma revisão de sucesso.
+        Aproveite a reta final do vestibular do EEAR para construir o
+        diferencial da sua aprovação. Aqui você vai encontrar tudo o que precisa
+        para fazer uma revisão de sucesso.
       </p>
       <Image src={capa} alt="Capa do Catálise" class="img-capa" slot="imagem" />
     </Capa>
@@ -333,6 +333,7 @@ const serv = await getEntry("produtos", "serv");
       botao="Matricule-se agora!"
       link="https://pay.hotmart.com/B74208231D?off=75lu3sk1"
       id="matricula"
+      estilo="capa-page"
     >
       <p class="txt-capa" slot="conteudo">
         A caminhada até a aprovação no ITA exige uma preparação exclusiva.

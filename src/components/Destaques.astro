@@ -57,12 +57,17 @@ const filtro = destaques.data.content.filter((item) =>
       el: ".swiper-pagination",
       clickable: true,
     },
+    breakpoints: {
+      600: {
+        slidesPerView: 2.2,
+      },
+    },
   });
 </script>
 <style scoped>
   section {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
     grid-gap: 2rem;
     place-items: center;
     place-content: space-between;
@@ -108,8 +113,7 @@ const filtro = destaques.data.content.filter((item) =>
     margin-top: 3rem;
     z-index: 2;
   }
-
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 768px) {
     section {
       display: none;
     }
@@ -119,17 +123,13 @@ const filtro = destaques.data.content.filter((item) =>
     }
     .destaque {
       width: -webkit-fill-available;
+      height: 16rem;
       text-align: left;
       background: var(--clr-dblue);
       padding: 1.4rem;
       border-radius: 1rem;
       backdrop-filter: blur(0.4rem);
       margin: 0 1rem;
-    }
-  }
-  @media screen and (max-width: 768px) {
-    section {
-      grid-template-columns: 1fr 1fr;
     }
   }
 </style>

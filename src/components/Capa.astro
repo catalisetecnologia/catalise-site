@@ -40,6 +40,7 @@ const { id, estilo, title, destaque, botao, link, linha } = Astro.props;
     margin-bottom: 1.1rem;
   }
   .capa-page {
+    position: relative;
     flex-direction: column-reverse;
     gap: 1rem;
   }
@@ -48,6 +49,7 @@ const { id, estilo, title, destaque, botao, link, linha } = Astro.props;
       drop-shadow(4rem 4rem 6rem hsl(195, 100%, 24%));
 
     z-index: -1;
+    position: relative;
   }
   .destaque {
     font-size: clamp(2.3rem, 3.7vw, 3.5rem);
@@ -92,18 +94,21 @@ const { id, estilo, title, destaque, botao, link, linha } = Astro.props;
     position: relative;
   }
   @media screen and (min-width: 768px) {
-    .capa-page {
-      flex-direction: row;
-      margin: 1.5rem 0;
-    }
-    .claro > div:first-child {
-      width: clamp(24rem, 40vw, 35rem);
-    }
     section {
       flex-direction: row;
     }
+    .capa-page div:first-child {
+      text-align: center;
+      place-items: center;
+      place-self: center;
+      display: flex;
+      flex-direction: column;
+    }
     .claro {
       width: -webkit-fill-available;
+    }
+    .claro > div:first-child {
+      width: clamp(6rem, 70vw, 24rem);
     }
     .claro .capa {
       display: unset;
@@ -113,14 +118,32 @@ const { id, estilo, title, destaque, botao, link, linha } = Astro.props;
     }
   }
   @media screen and (min-width: 1024px) {
+    .capa {
+      position: absolute;
+      right: clamp(-4rem, -10vw, -4rem);
+    }
     .claro {
       padding: 5rem 6rem;
       width: clamp(20rem, 80vw, 75rem);
     }
+    .claro > div:first-child {
+      width: clamp(6rem, 70vw, 37rem);
+    }
+    .capa-page {
+      flex-direction: row;
+      margin: 1.5rem 0;
+      height: 26rem;
+    }
+    .capa-page div:first-child {
+      width: 55%;
+      text-align: start;
+      place-items: start;
+      place-self: center;
+    }
     .claro .capa {
       display: unset;
       height: auto;
-      left: clamp(0rem, 40vw, 40rem);
+      left: clamp(0rem, 50vw, 40rem);
     }
     .links a {
       display: inline-block;

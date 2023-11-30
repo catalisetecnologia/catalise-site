@@ -21,6 +21,7 @@ const collectionAlunos = defineCollection({
     content: z.array(
       z.object({
         depoimento: z.string().optional(),
+        id: z.string().optional(),
         nome: z.string().optional(),
         foto: image().optional(),
         capa: image().optional(),

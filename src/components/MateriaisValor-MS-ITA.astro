@@ -2,10 +2,10 @@
 import { Image } from "astro:assets";
 import Botao from "./Botao.astro";
 
-import capa1 from "../img/miscelaneas-ita.png";
-import capa2 from "../img/miscelaneas-ita.png";
-import capa3 from "../img/miscelaneas-ita.png";
-import capa4 from "../img/miscelaneas-ita.png";
+import capa1 from "../img/materiais/miscelaneas ita.png";
+import capa2 from "../img/materiais/miscelanea de matematica ita.png";
+import capa3 from "../img/materiais/miscelanea de fisica ita.png";
+import capa4 from "../img/materiais/miscelanea de quimica ita.png";
 ---
 
 <section id="valor">
@@ -89,7 +89,7 @@ import capa4 from "../img/miscelaneas-ita.png";
     </div>
     <div class="capa">
       <Image
-        src={capa1}
+        src={capa2}
         alt="Capa do Catálise"
         class="img-capa"
         slot="imagem"
@@ -115,7 +115,7 @@ import capa4 from "../img/miscelaneas-ita.png";
     </div>
     <div class="capa">
       <Image
-        src={capa1}
+        src={capa3}
         alt="Capa do Catálise"
         class="img-capa"
         slot="imagem"
@@ -141,7 +141,7 @@ import capa4 from "../img/miscelaneas-ita.png";
     </div>
     <div class="capa">
       <Image
-        src={capa1}
+        src={capa4}
         alt="Capa do Catálise"
         class="img-capa"
         slot="imagem"
@@ -284,7 +284,7 @@ import capa4 from "../img/miscelaneas-ita.png";
     .content .capa {
       display: unset;
       width: auto;
-      height: auto;
+      height: -webkit-fill-available;
       position: absolute;
       right: -1rem;
     }

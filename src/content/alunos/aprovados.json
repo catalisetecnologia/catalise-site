@@ -1,27 +1,30 @@
 {
   "content": [
     {
+      "id": "ArnóbioTomaz",
       "nome": "Arnóbio Tomaz",
       "foto": "../../img/alunos-small/Arnóbio Tomaz.png",
       "capa": "../../img/aprovados/Arnóbio Tomaz.png",
       "tag": "Aprovado ITA",
-      "video": "https://www.youtube.com/watch?v=PfUoOOk2I6M",
+      "video": "https://www.youtube.com/embed/PfUoOOk2I6M?si=x_eyksoKk9lxqm55",
       "page": ["home", "IME"]
     },
     {
+      "id": "JoãoMatheus",
       "nome": "João Matheus",
       "foto": "../../img/alunos-small/João Matheus.png",
       "capa": "../../img/aprovados/João Matheus.png",
-      "video": "https://www.youtube.com/watch?v=bQN5xA-bhuQ",
+      "video": "https://www.youtube.com/embed/bQN5xA-bhuQ?si=tSPsd3_SfyuwqLTH",
       "tag": "Aprovado ITA",
       "page": ["home", "IME"]
     },
     {
+      "id": "BrunoMentor",
       "nome": "Bruno Mentor",
       "foto": "../../img/alunos-small/Bruno Mentor.png",
       "capa": "../../img/aprovados/Bruno Mentor.png",
       "tag": "Aprovado ITA",
-      "video": "https://www.youtube.com/watch?v=I677RCydEsc",
+      "video": "https://www.youtube.com/embed/I677RCydEsc?si=fc-9Tam9W1O4ZXop",
       "page": ["home", "IME"]
     }
   ]

@@ -2,11 +2,7 @@
 import { Image } from "astro:assets";
 import Layout from "../../layouts/Layout.astro";
 
-import {
-  Breadcrumbs,
-  BreadcrumbsItem,
-  Modal,
-} from "accessible-astro-components";
+import { Modal } from "accessible-astro-components";
 
 import Capa from "../../components/Capa.astro";
 import Destaques from "../../components/Destaques.astro";
@@ -230,7 +226,7 @@ const serv = await getEntry("produtos", "serv");
       subtitulo="Veja o que mais você vai ter acesso para conquistar a sua tão sonhada aprovação"
       colunas="col4"
     >
-      <Cardserv serv={serv} page="ITA-IME" />
+      <Cardserv serv={serv} page="EEAR" />
     </Section>
     <Section
       estilo="claro aprovacoes"
@@ -341,6 +337,7 @@ const serv = await getEntry("produtos", "serv");
       botao="Quero entrar na lista de espera"
       link="https://docs.google.com/forms/d/e/1FAIpQLSc6oKJjhIPZh04KJxy5fOOGZEtLtBmKFFophGQnqTrzFTTtqw/viewform?usp=sf_link"
       id="matricula"
+      estilo="capa-page"
     >
       <p class="txt-capa" slot="conteudo">
         Aproveite a oportunidade de ter a melhor preparação para a EEAR.
