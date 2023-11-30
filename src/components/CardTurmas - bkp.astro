@@ -6,17 +6,17 @@ import Botao from "./Botao.astro";
 interface Props {
   turmas: CollectionEntry<"produtos">;
   estilo: string;
-  swiper: boolean;
+  swipers: string;
   page: string;
 }
 
-const { turmas, estilo, swiper, page } = Astro.props;
+const { turmas, estilo, swipers, page } = Astro.props;
 
 const filtro = turmas.data.content.filter((item) => item.page.includes(page));
 ---
 
 {
-  !swiper &&
+  !swipers &&
     filtro.map((material) => (
       <div class={"card " + estilo}>
         <div class="capa">
@@ -39,8 +39,8 @@ const filtro = turmas.data.content.filter((item) => item.page.includes(page));
     ))
 }
 {
-  swiper && (
-    <div class={"Swiper swiper-turmas " + estilo}>
+  swipers && (
+    <div class={"Swiper swiper-turmas " + estilo + " " + swipers }>
       <div class="swiper-wrapper">
         {filtro.map((material) => (
           <div class="swiper-slide">
@@ -90,7 +90,7 @@ const filtro = turmas.data.content.filter((item) => item.page.includes(page));
     },
     breakpoints: {
       1026: {
-        slidesPerView: "auto",
+        slidesPerView: 2,
         spaceBetween: 24,
         centeredSlides: false,
       },
