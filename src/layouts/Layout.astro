@@ -19,11 +19,7 @@ const { title, description } = Astro.props;
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link
-      href="https://db.onlinewebfonts.com/a/BA7Xr1nmW0CDa3AB6UzsL0BFbbto8R7N"
-      rel="stylesheet"
-      type="text/css"
-    />
+    <link />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -37,7 +33,7 @@ const { title, description } = Astro.props;
     <slot />
     <Footer />
     <a
-      href="https://api.whatsapp.com/send?phone=5512997364916&text=Ol%C3%A1!%20Gostaria%20de%20ajuda"
+      href="https://api.whatsapp.com/send?phone=5512988231606&text=Ol%C3%A1!%20Gostaria%20de%20ajuda"
       class="contato"
     >
       <p>Precisa de ajuda?</p>
@@ -91,9 +87,22 @@ const { title, description } = Astro.props;
   </body>
 </html>
 <style is:global>
-  /*
-https://www.onlinewebfonts.com/search?q=GothamSSm
-*/
+  @font-face {
+    font-family: "GothamSSm-Light";
+    src: url("/fonts/Gotham-Light.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "GothamSSm-Book";
+    src: url("/fonts/Gotham-Book.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "GothamSSm-Bold";
+    src: url("/fonts/Gotham-Bold.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "GothamSSm-Black";
+    src: url("/fonts/Gotham-Black.woff2") format("woff2");
+  }
   :root {
     --font-light: GothamSSm-Light;
     --font-book: GothamSSm-Book;
@@ -132,6 +141,8 @@ https://www.onlinewebfonts.com/search?q=GothamSSm
     --swiper-scrollbar-drag-bg-color: var(--clr-blue);
     --swiper-pagination-color: var(--clr-green);
     --swiper-pagination-bullet-active-color: var(--clr-green);
+    --swiper-pagination-bullet-inactive-opacity: 0.4;
+    --swiper-pagination-bullet-inactive-color: var(--clr-dgreen);
   }
   .swiper-pagination-bullet-active {
     width: 2rem;
@@ -159,6 +170,7 @@ https://www.onlinewebfonts.com/search?q=GothamSSm
     margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
   }
   main {
     display: flex;
@@ -276,7 +288,8 @@ https://www.onlinewebfonts.com/search?q=GothamSSm
   }
   .img-capa {
     width: clamp(20rem, 60vw, 40rem);
-    height: auto;
+    height: -webkit-fill-available;
+    object-fit: contain;
   }
   .img-capa-material {
     position: relative;
@@ -284,7 +297,7 @@ https://www.onlinewebfonts.com/search?q=GothamSSm
     width: 26rem;
     height: auto;
     margin-bottom: -5rem;
-    margin-right: -10rem;
+    margin-right: 0rem;
   }
   .img-capa-valor {
     display: none;
@@ -345,7 +358,7 @@ https://www.onlinewebfonts.com/search?q=GothamSSm
     font-family: var(--font-bold);
     font-size: clamp(1.3rem, 2vw, 1.8rem);
     color: var(--font-black);
-    margin: 0.12rem 0;
+    margin: 1rem 0;
   }
   .modal__content h2 {
     font-family: var(--font-book);
@@ -375,8 +388,14 @@ https://www.onlinewebfonts.com/search?q=GothamSSm
     color: var(--clr-lblue) !important;
     border: 0.12rem solid var(--clr-lblue) !important;
   }
+  .modal-youtube {
+    width: -webkit-fill-available;
+    height: 30rem;
+    border-radius: 1rem;
+  }
   .card {
     border: none !important;
+    box-shadow: none !important;
   }
   ::-webkit-scrollbar-track {
   }
