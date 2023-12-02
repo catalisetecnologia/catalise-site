@@ -6,14 +6,15 @@ import Capa from "../components/Capa.astro";
 import Section from "../components/Section.astro";
 import Tabs from "../components/Tabs.astro";
 
-import capa from "../img/capa catalise.png";
+import capa from "../img/capa catalise logo.png";
+import aprovados from "../img/aprovados ita.png";
 ---
 
 <Layout title="sobre" description="Nossa historia">
   <main class="container">
     <Capa
       title="Nosso sonho"
-      linha="true"
+      linha
       destaque=" sua aprovação"
       estilo="capa-page"
     >
@@ -46,11 +47,10 @@ import capa from "../img/capa catalise.png";
         </b>
       </p>
       <Image
-        src={capa}
+        src={aprovados}
         alt="Capa do Catálise"
         class="img-capa-material"
         slot="imagem"
-        width="770"
         quality="max"
       />
     </Capa>
@@ -58,7 +58,7 @@ import capa from "../img/capa catalise.png";
       estilo="centro"
       tag="Nossa história"
       titulo="Conheça um pouco da nossa história"
-      subtitulo="000000 000000 0000000 0000000 000000 000000 0000000 00000 00000 000000 000000 00000 0000 00000"
+      subtitulo=""
     >
       <section class="design-section">
         <div class="timeline">
@@ -67,7 +67,7 @@ import capa from "../img/capa catalise.png";
             <div class="timeline-circle"></div>
           </div>
           <div class="timeline-component timeline-content">
-            <img src="/imagens/itaime fundo.png" alt="metodologia" />
+            <!-- <img src="/imagens/itaime fundo.png" alt="metodologia" /> -->
             <div class="texto">
               <span>2021</span>
               <h1>Mentoria para o ITA</h1>
@@ -82,7 +82,8 @@ import capa from "../img/capa catalise.png";
             </div>
           </div>
           <div class="timeline-component timeline-content">
-            <div class="texto">
+            <!-- <img src="/imagens/itaime fundo.png" alt="metodologia" /> -->
+            <div class="texto ai-r">
               <span>2021</span>
               <h1>Revisão para o ITA</h1>
               <p>
@@ -91,7 +92,6 @@ import capa from "../img/capa catalise.png";
                 que são cobrados pelo ITA.
               </p>
             </div>
-            <img src="/imagens/itaime fundo.png" alt="metodologia" />
           </div>
           <div class="timeline-middle">
             <div class="timeline-circle"></div>
@@ -102,7 +102,7 @@ import capa from "../img/capa catalise.png";
             <div class="timeline-circle"></div>
           </div>
           <div class="timeline-component timeline-content">
-            <img src="/imagens/itaime fundo.png" alt="metodologia" />
+            <!-- <img src="/imagens/itaime fundo.png" alt="metodologia" /> -->
             <div class="texto">
               <span>2021</span>
               <h1>Primeira Aprovação</h1>
@@ -114,9 +114,9 @@ import capa from "../img/capa catalise.png";
               </p>
             </div>
           </div>
-
           <div class="timeline-component timeline-content">
-            <div class="texto">
+            <!-- <img src="/imagens/itaime fundo.png" alt="metodologia" /> -->
+            <div class="texto ai-r">
               <span>2022</span>
               <h1>Turma ITA</h1>
               <p>
@@ -126,7 +126,6 @@ import capa from "../img/capa catalise.png";
                 focados no ITA e muito mais.
               </p>
             </div>
-            <img src="/imagens/itaime fundo.png" alt="metodologia" />
           </div>
           <div class="timeline-middle">
             <div class="timeline-circle"></div>
@@ -137,7 +136,7 @@ import capa from "../img/capa catalise.png";
             <div class="timeline-circle"></div>
           </div>
           <div class="timeline-component timeline-content">
-            <img src="/imagens/itaime fundo.png" alt="metodologia" />
+            <!-- <img src="/imagens/itaime fundo.png" alt="metodologia" /> -->
             <div class="texto">
               <span>2022</span>
               <h1>Aprovações no ITA e IME</h1>
@@ -151,8 +150,9 @@ import capa from "../img/capa catalise.png";
           </div>
 
           <div class="timeline-component timeline-content">
-            <div class="texto">
+            <div class="texto ai-r">
               <span>2023</span>
+              <!-- <img src="/imagens/itaime fundo.png" alt="metodologia" /> -->
               <h1>Turma ITA-IME</h1>
               <p>
                 No início de 2023 consolidamos nossa Turma ITA e expandimos a
@@ -163,7 +163,6 @@ import capa from "../img/capa catalise.png";
                 de conversa com Psicóloga
               </p>
             </div>
-            <img src="/imagens/itaime fundo.png" alt="metodologia" />
           </div>
           <div class="timeline-middle">
             <div class="timeline-circle"></div>
@@ -174,7 +173,7 @@ import capa from "../img/capa catalise.png";
             <div class="timeline-circle"></div>
           </div>
           <div class="timeline-component timeline-content">
-            <img src="/imagens/itaime fundo.png" alt="metodologia" />
+            <!-- <img src="/imagens/itaime fundo.png" alt="metodologia" /> -->
             <div class="texto">
               <span>2023</span>
               <h1>Aprovações no ITA e IME</h1>
@@ -186,7 +185,8 @@ import capa from "../img/capa catalise.png";
             </div>
           </div>
           <div class="timeline-component timeline-content">
-            <div class="texto">
+            <div class="texto ai-r">
+              <!-- <img src="/imagens/itaime fundo.png" alt="metodologia" /> -->
               <span>2024</span>
               <h1>Chegada de mais Inovações</h1>
               <p>
@@ -195,29 +195,13 @@ import capa from "../img/capa catalise.png";
                 muito mais. Acompanhe o Catálise Vestibulares.
               </p>
             </div>
-            <img src="/imagens/itaime fundo.png" alt="metodologia" />
           </div>
           <div class="timeline-middle">
             <div class="timeline-circle"></div>
           </div>
           <div class="timeline-empty"></div>
           <div class="timeline-empty"></div>
-          <div class="timeline-middle">
-            <div class="timeline-circle"></div>
-          </div>
-          <div class="timeline-component timeline-content">
-            <img src="/imagens/itaime fundo.png" alt="metodologia" />
-            <div class="texto">
-              <span>2021</span>
-              <h1>Primeira Aprovação</h1>
-              <p>
-                Já ao final do nosso primeiro ano de mentoria conquistamos a
-                nossa primeira aprovação no vestibular do ITA, apontando que
-                estávamos seguindo em um bom caminho de preparação dos nossos
-                alunos.
-              </p>
-            </div>
-          </div>
+          <div class="timeline-middle"></div>
         </div>
       </section>
     </Section>
@@ -255,10 +239,13 @@ import capa from "../img/capa catalise.png";
   }
 
   .timeline-component {
-    margin: 0 0 0 0;
+    margin: 0rem 0 1rem 0;
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    background: var(--clr-dblue);
+    border-radius: 1rem;
+    padding: 1.4rem;
   }
   .timeline-component img {
     width: 50%;
@@ -277,8 +264,13 @@ import capa from "../img/capa catalise.png";
   }
   .timeline-component .texto h1 {
     font-family: var(--font-bold);
-    font-size: 2rem;
+    font-size: 1.4rem;
     margin: 1rem 0;
+    color: var(--clr-green);
+  }
+  .ai-r {
+    align-items: start !important;
+    text-align: start !important;
   }
 
   @media screen and (min-width: 768px) {
@@ -307,10 +299,19 @@ import capa from "../img/capa catalise.png";
       transform: translateX(-50%);
     }
     .timeline-component {
-      flex-direction: row;
+      flex-direction: column;
+      background: none;
+      border-radius: 0;
+      padding: 0;
     }
     .timeline-component .texto {
-      width: 50%;
+      padding: 1rem 1rem;
+      width: auto;
+      max-width: 24rem;
+    }
+    .ai-r {
+      align-items: flex-end !important;
+      text-align: end !important;
     }
   }
 </style>

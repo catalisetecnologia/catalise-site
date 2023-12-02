@@ -5,17 +5,14 @@ import Layout from "../layouts/Layout.astro";
 import Capa from "../components/Capa.astro";
 import Destaques from "../components/Destaques.astro";
 import Section from "../components/Section.astro";
-import Cardserv from "../components/Cardserv.astro";
-import Accordeon from "../components/Accordeon.astro";
 
-import capa from "../img/turma itaime.png";
+import capa from "../img/capa catalise.png";
+import logo from "../img/catalise elemento.png";
 import beneficios from "../img/beneficios-1.png";
 import materiais from "../img/materiais.png";
 
 import { getEntry } from "astro:content";
 const destaques = await getEntry("produtos", "destaques");
-const serv = await getEntry("produtos", "serv");
-const perguntas = await getEntry("alunos", "perguntas");
 ---
 
 <Layout title="Turma EEAR" description="Catálise - turma EEAR">
@@ -23,23 +20,141 @@ const perguntas = await getEntry("alunos", "perguntas");
     <Capa
       title="Impulsione suas"
       destaque=" matrículas!"
+      estilo="capa-page"
       botao="Entre em contato"
+      link="#contato"
     >
       <p class="txt-capa" slot="conteudo">
         Ofereça aos seus alunos a oportunidade de conquistar um futuro brilhante
         com a parceria do nosso Curso Pré-Vestibular.
       </p>
-      <p class="txt-capa" slot="conteudo">
-        O Catálise é uma instituição de ensino online com experiência em
-        preparar estudantes para os vestibulares mais concorridos do país. Conta
-        com uma equipe de professores altamente qualificados e apaixonados por
-        ensinar. Tem obtido excelentes resultados conduzindo alunos à aprovação,
-        com 24 aprovados na primeira fase do ITA e 21 no IME.
-      </p>
       <Image src={capa} alt="Capa do Catálise" class="img-capa" slot="imagem" />
     </Capa>
     <Destaques destaques={destaques} page="PLANO-ESCOLAS" />
-    <Capa estilo="claro" title="Transformando sonhos em conquistas  " texto="">
+    <Capa estilo="claro" title="O Catálise">
+      <div slot="conteudo">
+        <p class="txt-capa-claro">
+          O Catálise é uma instituição de ensino online com experiência em
+          preparar estudantes para os vestibulares mais concorridos do país.
+          Conta com uma equipe de professores altamente qualificados e
+          apaixonados por ensinar. Tem obtido excelentes resultados conduzindo
+          alunos à aprovação, com 24 aprovados na primeira fase do ITA e 21 no
+          IME.
+        </p>
+      </div>
+      <Image
+        src={logo}
+        alt="Capa do Catálise"
+        class="img-capa img-capa-material"
+        slot="imagem"
+      />
+    </Capa>
+    <Section
+      estilo="centro"
+      colunas="col4"
+      tag="Planos"
+      titulo="Formas de Parceria"
+      subtitulo="Trabalhamos com dois modelos de parcerias com escolas para impulsionar a aprovação em vestibulares"
+    >
+      <div class="parcerias">
+        <div class="parceria">
+          <!-- <Image src={logo} alt="Logo da Escola" class="logo" /> -->
+          <h1 class="txt-parceria">Turma<br /> Pré-Militar</h1>
+          <p class="txt-parceria">
+            <ul>
+              <li>Aulas do básico ao Avançado</li>
+              <li>Exercícios do básico ao Avançado</li>
+              <li>Curso de produtividade nos estudos</li>
+              <li>Simulados modelo ITA</li>
+              <li>Aulas Extras Ao Vivo</li>
+              <li>Plantão de dúvidas Ao Vivo</li>
+              <li>Material didático exclusivo</li>
+              <li>E muito mais</li>
+            </ul>
+          </p>
+        </div>
+        <div class="parceria">
+          <!-- <Image src={logo} alt="Logo da Escola" class="logo" /> -->
+          <h1 class="txt-parceria">Reforço<br /> e Aprofundamento</h1>
+          <p class="txt-parceria">
+            <ul>
+              <li>Aulas do básico ao Avançado</li>
+              <li>Exercícios do básico ao Avançado</li>
+              <li>Curso de produtividade nos estudos</li>
+              <li>Material didático exclusivo</li>
+            </ul>
+            <br />
+            <p>
+              *O plantão de dúvidas de física, química e matemática
+              individualizado pode ser contratado como adicional.
+            </p>
+          </p>
+        </div>
+      </div>
+    </Section>
+
+    <Capa estilo="claro" title="Material didático">
+      <div slot="conteudo">
+        <p class="txt-capa-claro">
+          O nosso Plano Escolas é uma solução sob medida para impulsionar o
+          desempenho dos seus alunos e prepará-los para os vestibulares mais
+          concorridos do país, incluindo o ITA - Instituto Tecnológico de
+          Aeronáutica e IME- Instituto Militar de Engenharia.
+        </p>
+      </div>
+      <Image
+        src={materiais}
+        alt="Capa do Catálise"
+        class="img-capa img-capa-material"
+        slot="imagem"
+      />
+    </Capa>
+
+    <Capa
+      id="contato"
+      title="Faça seu"
+      linha
+      destaque=" agendamento"
+      botao="Faça o seu agendamento!"
+      link="https://calendar.app.google/4DxuVx9iGpQgiTAk7"
+    >
+      <div slot="conteudo">
+        <h1 class="valor" slot="conteudo">Sarah Muricy</h1>
+        <ul class="capa-itens" slot="conteudo">
+          <li>
+            <a href="tel:+5512988816588">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 480 480"
+              >
+                <path
+                  fill="#fff"
+                  d="M352 16H128a32 32 0 0 0-32 32v384a32 32 0 0 0 32 32h224a32 32 0 0 0 32-32V48a32 32 0 0 0-32-32Zm-72 16a8 8 0 1 1 0 16 8 8 0 0 1 0-16Zm-64 0h32a8 8 0 0 1 0 16h-32a8 8 0 0 1 0-16Zm136 400H128V48h48l6.62 6.62c6 6 14.15 9.38 22.63 9.38h69.49a32 32 0 0 0 22.62-9.38L304 48h48v384Z"
+                ></path>
+              </svg>
+               (12) 98881 6588</a
+            >
+          </li>
+          <li>
+            <a href="mailto:contato@catalisevestibulares.com.br">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 500 500"
+              >
+                <path
+                  fill="#fff"
+                  d="M55 70c-24.8 0-45 20.2-45 45v4.26L250 290l240-170.74V115c0-24.8-20.2-45-45-45H55Zm8.52 20h372.92L250 220 63.52 90ZM10 140.27V385c0 24.8 20.2 45 45 45h390c24.8 0 45-20.2 45-45V140.27l-60 42.7V410H70V182.97l-60-42.7Z"
+                ></path>
+              </svg>
+               contato@catalisevestibulares.com.br</a
+            >
+          </li>
+        </ul>
+      </div>
+    </Capa>
+    <Capa estilo="claro" title="Transformando sonhos em conquistas">
       <ul class="capa-itens" slot="conteudo">
         <li>
           <svg
@@ -116,85 +231,46 @@ const perguntas = await getEntry("alunos", "perguntas");
         quality="max"
       />
     </Capa>
-    <Section
-      estilo="centro"
-      colunas="col4"
-      tag="Planos"
-      titulo="Formas de Parceria"
-      subtitulo="Trabalhamos com dois modelos de parcerias com escolas para impulsionar a aprovação em vestibulares"
-    >
-      <!-- <Cardserv serv={serv} page="PLANO-ESCOLAS" /> -->
-    </Section>
-    <Capa estilo="claro" title="Material didático">
-      <div slot="conteudo">
-        <p class="txt-capa-claro">
-          O nosso Plano Escolas é uma solução sob medida para impulsionar o
-          desempenho dos seus alunos e prepará-los para os vestibulares mais
-          concorridos do país, incluindo o ITA - Instituto Tecnológico de
-          Aeronáutica e IME- Instituto Militar de Engenharia.
-        </p>
-      </div>
-      <Image
-        src={materiais}
-        alt="Capa do Catálise"
-        class="img-capa img-capa-material"
-        slot="imagem"
-      />
-    </Capa>
   </main>
-  <Capa
-    title="Faça seu"
-    linha="true"
-    destaque=" agendamento"
-    botao="Faça o seu agendamento!"
-    link="https://calendar.app.google/4DxuVx9iGpQgiTAk7"
-  >
-  <div slot="conteudo">
-    <h1 class="valor" slot="conteudo">Sarah Muricy</h1>
-    <ul class="capa-itens" slot="conteudo">
-      <li>
-        <a href="tel:+5512988816588">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 480 480"
-          >
-            <path
-              fill="#fff"
-              d="M352 16H128a32 32 0 0 0-32 32v384a32 32 0 0 0 32 32h224a32 32 0 0 0 32-32V48a32 32 0 0 0-32-32Zm-72 16a8 8 0 1 1 0 16 8 8 0 0 1 0-16Zm-64 0h32a8 8 0 0 1 0 16h-32a8 8 0 0 1 0-16Zm136 400H128V48h48l6.62 6.62c6 6 14.15 9.38 22.63 9.38h69.49a32 32 0 0 0 22.62-9.38L304 48h48v384Z"
-            ></path>
-          </svg>
-           (12) 98881 6588</a
-        >
-      </li>
-      <li>
-        <a href="mailto:contato@catalisevestibulares.com.br">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 500 500"
-          >
-            <path
-              fill="#fff"
-              d="M55 70c-24.8 0-45 20.2-45 45v4.26L250 290l240-170.74V115c0-24.8-20.2-45-45-45H55Zm8.52 20h372.92L250 220 63.52 90ZM10 140.27V385c0 24.8 20.2 45 45 45h390c24.8 0 45-20.2 45-45V140.27l-60 42.7V410H70V182.97l-60-42.7Z"
-            ></path>
-          </svg>
-           contato@catalisevestibulares.com.br</a
-        >
-      </li>
-    </ul>
-  </div>
-    <Image src={capa} alt="Capa do Catálise" class="img-capa" slot="imagem" />
-    <Section estilo="claro centro" tag="" titulo="Perguntas frequentes">
-      <Accordeon perguntas={perguntas} estilo="grande" page="PARCERIAS" />
-    </Section>
-  </Capa>
-
-  <style scoped>
-    .valor {
-      font-family: var(--font-black);
-      color: var(--clr-yellow);
-      margin-top: 2.4rem;
-    }
-  </style>
 </Layout>
+<style scoped>
+  .valor {
+    font-family: var(--font-black);
+    color: var(--clr-yellow);
+    margin-top: 2.4rem;
+  }
+  .parcerias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    justify-content: center;
+    gap: 1rem;
+  }
+  .parcerias .parceria {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background: var(--clr-dblue);
+    padding: 1.4rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(0.4rem);
+    max-width: 50rem;
+  }
+  .parcerias .parceria img.logo {
+    width: -webkit-fill-available;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  .parcerias .parceria .txt-parceria {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .parcerias .parceria ul {
+    margin-top: 1rem;
+  }
+  .parcerias .parceria ul li {
+  }
+  .parcerias .parceria h1 {
+    font-size: clamp(1.6rem, 3vw, 2rem);
+    color: var(--clr-green);
+  }
+</style>

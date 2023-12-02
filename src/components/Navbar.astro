@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import logo from "../img/logo catalise.png";
 import MenuMobile from "./MenuMobile.astro";
+import Botao from "./Botao.astro";
 ---
 
 <nav class="container navbar">
@@ -11,12 +12,41 @@ import MenuMobile from "./MenuMobile.astro";
   <MenuMobile />
   <div class="links">
     <a href="/">
-      <Image src={logo} alt="Logo do Catálise" class="logo" />
+      <Image src={logo} alt="Logo do Catálise" class="log logo-mobile" />
     </a>
-    <a href="/produtos" class="link">Nossos produtos</a>
+    <a class="link dropdown">Nossos produtos</a>
+    <div class="dropdown-links">
+      <div class="description">
+        <h1>Confira nossos produtos!</h1>
+        <p>Explore nossos produtos e siga em direção ao sonho da aprovação.</p>
+        <!-- <a href="/produtos">Saiba mais</a> -->
+      </div>
+      <div class="produtos-links">
+        <a class="produtos-link link active">Turmas</a>
+        <a class="produtos-link link">Materiais</a>
+      </div>
+      <div class="produtos-links-produtos active">
+        <a class="link" href="/produtos/ita-ime">Turma ITA-IME</a>
+        <a class="link" href="/produtos/pre-ita-ime">Turma PRÉ ITA-IME</a>
+        <a class="link" href="/produtos/revisao-ita-ime">Revisão ITA-IME</a>
+        <a class="link" href="/produtos/eear">Turma EEAR</a>
+        <a class="link" href="/produtos/revisao-eear">Revisão EEAR</a>
+      </div>
+      <div class="produtos-links-produtos">
+        <a class="link" href="/produtos/biblia-ita">A Biblia para o ITA</a>
+        <a class="link" href="/produtos/bizuarios">Bizuários de Química</a>
+        <a class="link" href="/produtos/miscelaneas-ita">Miscelâneas ITA</a>
+        <a class="link" href="/produtos/miscelaneas-ime">Miscelâneas IME</a>
+        <a class="link" href="/produtos/miscelaneas-afa">Miscelâneas AFA</a>
+        <a class="link" href="/produtos/miscelaneas-eear">Miscelâneas EEAR</a>
+      </div>
+    </div>
     <a href="/sobre" class="link">Quem somos</a>
     <a href="/parcerias" class="link">Plano Escolas</a>
-    <a href="https://api.whatsapp.com/send?phone=5512997364916&text=Ol%C3%A1!%20Gostaria%20de%20ajuda" class="link">Contato</a>
+    <a
+      href="https://api.whatsapp.com/send?phone=5512997364916&text=Ol%C3%A1!%20Gostaria%20de%20ajuda"
+      class="link">Contato</a
+    >
     <div class="social">
       <ul>
         <li>
@@ -96,9 +126,46 @@ import MenuMobile from "./MenuMobile.astro";
       link.classList.add("active");
     }
   });
+
+  const url = window.location.pathname;
+  const links = document.querySelectorAll(".produtos-link");
+  const divs = document.querySelectorAll(".produtos-links-produtos");
+
+  // Add click event listener to each link
+  links.forEach((link, index) => {
+    link.addEventListener("click", () => {
+      // Remove "active" class from all link
+      links.forEach((btn) => btn.classList.remove("active"));
+      // Add "active" class to the clicked link
+      link.classList.add("active");
+      // Hide all divs
+      divs.forEach((div) => div.classList.remove("active"));
+      // Show the corresponding div based on the index of the clicked link
+      divs[index].classList.add("active");
+    });
+  });
+  if (
+    url.includes("/produtos/biblia-ita") ||
+    url.includes("/produtos/bizuarios") ||
+    url.includes("/produtos/miscelaneas-ita") ||
+    url.includes("/produtos/miscelaneas-ime") ||
+    url.includes("/produtos/miscelaneas-afa") ||
+    url.includes("/produtos/miscelaneas-eear")
+  ) {
+    links[0].classList.remove("active");
+    links[1].classList.add("active");
+
+    divs[0].classList.remove("active");
+    divs[1].classList.add("active");
+  }
+
+
 </script>
 
 <style scoped>
+  a {
+    cursor: pointer;
+  }
   .logo {
     width: 9rem;
     height: auto;
@@ -167,6 +234,79 @@ import MenuMobile from "./MenuMobile.astro";
     width: 1.2rem;
     margin-right: 0.4rem;
   }
+  .dropdown-links {
+    position: absolute;
+    top: 6rem;
+    left: 0;
+    display: none;
+    gap: 3rem;
+    width: -webkit-fill-available;
+    background: var(--clr-dblue);
+    margin-right: 1rem;
+    padding: 3rem;
+    border-radius: 2rem;
+    border: 0.12rem solid hsl(210deg 33% 99% / 15%);
+    backdrop-filter: blur(10rem);
+    z-index: 4;
+    color: var(--clr-white);
+    box-shadow: 0 0.4rem 3rem 0 hsl(0deg 0% 0% / 30%);
+  }
+  .dropdown-links .description,
+  .dropdown-links .produtos-links,
+  .produtos-links-produtos {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-right: 3rem;
+  }
+  .dropdown-links .description {
+    width: 28%;
+    min-width: 11rem;
+    border-right: 0.12rem solid hsl(210deg 33% 99% / 15%);
+  }
+  .dropdown-links .description a {
+    margin-top: 1rem;
+    color: var(--clr-green);
+  }
+  .dropdown-links .produtos-links {
+    border-right: 0.12rem solid hsl(210deg 33% 99% / 15%);
+  }
+  .dropdown-links .produtos-links-produtos {
+    display: none;
+  }
+  .dropdown-links .produtos-links-produtos.active {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+    width: 28rem;
+    height: -webkit-fill-available;
+  }
+  .dropdown-links h1 {
+    font-size: clamp(1.4rem, 2vw, 1.8rem);
+  }
+  .dropdown-links p {
+    font-family: var(--font-book);
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+  }
+  .links .dropdown-links a {
+    padding: 0.5rem 0;
+  }
+  .links .dropdown-links a.active {
+    position: relative;
+    right: 1rem;
+    background: hsl(219.31deg 80.56% 14.12% / 60%);
+    padding: 0.5rem 1rem;
+    border-radius: 100rem;
+    width: 11rem;
+  }
+  .dropdown:hover ~ .dropdown-links {
+    display: flex;
+  }
+  .dropdown-links:hover.dropdown-links {
+    display: flex;
+  }
+  .link:has(+ .dropdown-links:hover) {
+    color: var(--clr-green);
+  }
   @media screen and (min-width: 768px) {
     .links {
       display: flex;
@@ -176,12 +316,12 @@ import MenuMobile from "./MenuMobile.astro";
     }
     .links a {
       display: inline-block;
-      padding: 15px 20px;
+      padding: 2rem 2rem;
     }
     .links .social {
       display: none;
     }
-    .links a:first-child {
+    .links .logo-mobile {
       display: none;
     }
   }

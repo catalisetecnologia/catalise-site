@@ -14,7 +14,6 @@ const { turmas, estilo, swiper, page } = Astro.props;
 
 const filtro = turmas.data.content.filter((item) => item.page.includes(page));
 ---
-
 {
   !swiper &&
     filtro.map((material) => (

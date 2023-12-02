@@ -21,6 +21,7 @@ import beneficios from "../../img/beneficios-2.png";
 import materiais from "../../img/materiais.png";
 
 import { getEntry } from "astro:content";
+const turmas = await getEntry("produtos", "turmas");
 const perguntas = await getEntry("alunos", "perguntas");
 const depoimentos = await getEntry("alunos", "depoimentos");
 const aprovados = await getEntry("alunos", "aprovados");
@@ -29,12 +30,6 @@ const serv = await getEntry("produtos", "serv");
 ---
 
 <Layout title="Turma ITA/IME" description="Catálise - turma ITA/IME">
-  <!--
-  <Breadcrumbs>
-    <BreadcrumbsItem href="/produtos" label="Nossos produtos" />
-    <BreadcrumbsItem currentPage={true} label="ITA-IME" />
-  </Breadcrumbs>
-  -->
   <main class="container">
     <Capa
       title="Revisão"
@@ -42,6 +37,9 @@ const serv = await getEntry("produtos", "serv");
       botao="Quero entrar na lista de espera"
       link="https://docs.google.com/forms/d/e/1FAIpQLSct9odG9fl_V-mrOsxAmm_gVQ8OG_GGcYq0cKU6_B6nV4Hogg/viewform?usp=sf_link"
       estilo="capa-page"
+      video="Conheça a turma"
+      vlink={turmas}
+      key="revisao-eear"
     >
       <p class="txt-capa" slot="conteudo">
         Aproveite a reta final da prova da ITA para construir o diferencial da
@@ -124,10 +122,10 @@ const serv = await getEntry("produtos", "serv");
       <div class="tema">
         <h2>Matemática</h2>
         <ul>
-          <li>Aritmética</li>
-          <li>Álgebra</li>
-          <li>Geometria Básica</li>
-          <li>Geometria Básica</li>
+          <li>Geometria Analítica</li>
+          <li>Geometria Espacial</li>
+          <li>Geometria Plana</li>
+          <li>Trigonometria</li>
         </ul>
         <button id="modal-matematica_trigger" class="btn-tema">Veja mais</button
         >
@@ -135,76 +133,34 @@ const serv = await getEntry("produtos", "serv");
       <div class="tema">
         <h2>Física</h2>
         <ul>
-          <li>Conceitos iniciais da física</li>
-          <li>Vetores</li>
-          <li>Cinemática</li>
-          <li>Dinâmica</li>
+          <li>Óptica Geométrica</li>
+          <li>Trabalho e Energia</li>
+          <li>Eletrodinâmica</li>
+          <li>Magnetismo</li>
         </ul>
         <button id="modal-fisica_trigger" class="btn-tema">Veja mais</button>
       </div>
       <div class="tema">
-        <h2>Química</h2>
+        <h2>Português</h2>
         <ul>
-          <li>Introdução à Química</li>
-          <li>Separação de misturas</li>
-          <li>Modelos atômicos</li>
-          <li>Tabela periódica</li>
-        </ul>
-        <button id="modal-quimica_trigger" class="btn-tema">Veja mais</button>
-      </div>
-      <div class="tema">
-        <h2>Língua Portuguesa</h2>
-        <ul>
-          <li>Aspectos do Texto</li>
-          <li>Tipologia Textual</li>
-          <li>Gêneros Textuais</li>
+          <li>Pressuposto e Subentendido</li>
           <li>Figuras de Linguagem</li>
+          <li>Concordância nominal</li>
+          <li>Acentuação</li>
         </ul>
         <button id="modal-portugues_trigger" class="btn-tema">Veja mais</button>
       </div>
       <div class="tema">
-        <h2>Literatura</h2>
-        <ul>
-          <li>Introdução à Literatura</li>
-          <li>Gêneros Literários</li>
-          <li>Trovadorismo</li>
-          <li>Humanismo</li>
-        </ul>
-        <button id="modal-literatura_trigger" class="btn-tema">Veja mais</button
-        >
-      </div>
-      <div class="tema">
         <h2>Inglês</h2>
         <ul>
-          <li>Present</li>
-          <li>Cognates and False Cognates</li>
-          <li>Connectives and Adjectives</li>
-          <li>Pronouns</li>
+          <li>Simple Present and Simple Past</li>
+          <li>Prepositional Verbs</li>
+          <li>Phrasal Verbs</li>
+          <li>Reading Skills</li>
         </ul>
         <button id="modal-ingles_trigger" class="btn-tema">Veja mais</button>
       </div>
-      <div class="tema">
-        <h2>Redação</h2>
-        <ul>
-          <li>Introdução à Produção textual</li>
-          <li>Critérios de Correção do ITA</li>
-          <li>Como uma coletânea</li>
-          <li>Tese e planejamento</li>
-        </ul>
-        <button id="modal-redacao_trigger" class="btn-tema">Veja mais</button>
-      </div>
-      <div class="tema">
-        <h2>Produtividade</h2>
-        <ul>
-          <li>Matemática Básica</li>
-          <li>Matemática Básica</li>
-          <li>Matemática Básica</li>
-          <li>Matemática Básica</li>
-        </ul>
-        <button id="modal-produtividade_trigger" class="btn-tema"
-          >Veja mais</button
-        >
-      </div>
+     
     </Section>
     <Capa estilo="claro" title="Material didático">
       <div slot="conteudo">
@@ -312,7 +268,7 @@ const serv = await getEntry("produtos", "serv");
     </Section>
     <Capa
       title="Garanta"
-      linha="true"
+      linha
       destaque=" sua Vaga!"
       botao="Quero entrar na lista de espera"
       link="https://docs.google.com/forms/d/e/1FAIpQLSct9odG9fl_V-mrOsxAmm_gVQ8OG_GGcYq0cKU6_B6nV4Hogg/viewform?usp=sf_link"
@@ -361,264 +317,61 @@ const serv = await getEntry("produtos", "serv");
     <Section estilo="claro centro" tag="" titulo="Perguntas frequentes">
       <Accordeon perguntas={perguntas} estilo="grande" page="REV-EEAR" />
     </Section>
-    <Modal
-      triggerId="modal-matematica_trigger"
-      title="Matemática"
-      closeText="X"
-    >
-      <h2>Frente 1</h2>
-      <ul>
-        <li>Aritmética</li>
-        <li>Álgebra</li>
-        <li>Geometria Básica</li>
-        <li>Conjuntos</li>
-        <li>Funções</li>
-        <li>Cálculo para ITA e IME</li>
-        <li>Congruência Linear</li>
-        <li>Outros tópicos avançados</li>
-      </ul>
-      <h2>Frente 2</h2>
-      <ul>
-        <li>Trigonometria</li>
-        <li>Números complexos</li>
-        <li>Números Binomiais</li>
-        <li>Polinômios</li>
-      </ul>
-      <h2>Frente 3</h2>
-      <ul>
-        <li>Geometria Plana</li>
-        <li>Geometria Analítica</li>
-        <li>Geometria Espacial</li>
-      </ul>
-      <h2>Frente 4</h2>
-      <ul>
-        <li>Sequências</li>
-        <li>Análise Combinatória</li>
-        <li>Probabilidade</li>
-        <li>Matrizes e Determinantes</li>
-        <li>Sistemas Lineares</li>
-      </ul>
+    <Modal triggerId="modal-matematica_trigger" closeText="X">
+      <div class="modal-main">
+        <h1>Matemática</h1>
+        <h2></h2>
+        <ul>
+          <li>Geometria Analítica</li>
+          <li>Geometria Espacial</li>
+          <li>Geometria Plana</li>
+          <li>Trigonometria</li>
+          <li>Logaritmos</li>
+          <li>Estatística</li>
+          <li>Funções</li>
+        </ul>
+      </div>
     </Modal>
-    <Modal triggerId="modal-fisica_trigger" title="Física" closeText="X">
-      <h2>Frente 1</h2>
-      <ul>
-        <li>Conceitos iniciais da física</li>
-        <li>Vetores</li>
-        <li>Cinemática</li>
-        <li>Dinâmica</li>
-        <li>Trabalho e Energia</li>
-        <li>Impulso e Quantidade de Movimento</li>
-        <li>Estática</li>
-        <li>Gravitação Universal</li>
-        <li>Mecânica Rotacional</li>
-        <li>Análise Dimensional</li>
-        <li>Física Moderna</li>
-      </ul>
-      <h2>Frente 2</h2>
-      <ul>
-        <li>Óptica Geométrica</li>
-        <li>Termometria</li>
-        <li>Dilatação</li>
-        <li>Calorimetria</li>
-        <li>Gases</li>
-        <li>Termodinâmica</li>
-        <li>Hidrostática</li>
-        <li>Hidrodinâmica</li>
-        <li>Movimento Harmônico Simples</li>
-        <li>Ondulatória</li>
-      </ul>
-      <h2>Frente 3</h2>
-      <ul>
-        <li>Eletrostática</li>
-        <li>Eletrodinâmica</li>
-        <li>Magnetismo</li>
-      </ul>
+    <Modal triggerId="modal-fisica_trigger" closeText="X">
+      <div class="modal-main">
+        <h1>Física</h1>
+        <h2></h2>
+        <ul>
+          <li>Óptica Geométrica</li>
+          <li>Trabalho e Energia</li>
+          <li>Eletrodinâmica</li>
+          <li>Magnetismo</li>
+          <li>Ondulatória</li>
+          <li>Cinemática</li>
+          <li>Dinâmica</li>
+        </ul>
+      </div>
     </Modal>
-    <Modal triggerId="modal-quimica_trigger" title="Química" closeText="X">
-      <h2>Frente 1</h2>
-      <ul>
-        <li>Introdução à Química</li>
-        <li>Separação de misturas</li>
-        <li>Modelos atômicos</li>
-        <li>Tabela periódica</li>
-        <li>Ligações químicas</li>
-        <li>Substâncias inorgânicas</li>
-        <li>Teorias modernas Ácido-Base</li>
-        <li>Reações inorgânicas</li>
-        <li>Gases</li>
-        <li>Sólidos e Cristalografia</li>
-        <li>Coloides</li>
-        <li>Soluções</li>
-        <li>Estequiometria</li>
-        <li>Termoquímica</li>
-        <li>Termodinâmica Química</li>
-        <li>Cinética Química</li>
-        <li>Equilíbrio Químico</li>
-        <li>Propriedades Coligativas</li>
-        <li>Oxirredução</li>
-        <li>Eletroquímica</li>
-        <li>Radioatividade</li>
-      </ul>
-      <h2>Frente 2</h2>
-      <ul>
-        <li>Substâncias Orgânicas</li>
-        <li>Isomeria</li>
-        <li>Reações Orgânicas</li>
-        <li>Polímeros</li>
-        <li>Bioquímica</li>
-      </ul>
+    <Modal triggerId="modal-portugues_trigger" closeText="X">
+      <div class="modal-main">
+        <h1>Português</h1>
+        <h2></h2>
+        <ul>
+          <li>Pressuposto e Subentendido</li>
+          <li>Figuras de Linguagem</li>
+          <li>Concordância nominal</li>
+          <li>Acentuação</li>
+          <li>Regência</li>
+        </ul>
+      </div>
     </Modal>
-    <Modal
-      triggerId="modal-portugues_trigger"
-      title="Língua Português"
-      closeText="X"
-    >
-      <h2>Interpretação de Texto</h2>
-      <ul>
-        <li>Aspectos do Texto</li>
-        <li>Tipologia Textual</li>
-        <li>Gêneros Textuais</li>
-        <li>Figuras de Linguagem</li>
-        <li>Categorias de mundo</li>
-        <li>Temas e Figuras</li>
-        <li>Discurso e Interdiscursividade</li>
-        <li>Propaganda ideológica</li>
-        <li>Intertextualidade</li>
-        <li>Texto, Ideologia e Argumentação</li>
-        <li>Nível da expressão</li>
-        <li>Implícitos, ambiguidade e semântica</li>
-        <li>Variação linguística</li>
-        <li>Coesão</li>
-        <li>Coerência e Concisão</li>
-      </ul>
-      <h2>Gramática</h2>
-      <ul>
-        <li>Classes de palavras</li>
-        <li>Formação de palavras</li>
-        <li>Análise sintática</li>
-        <li>Crase</li>
-        <li>Pontuação</li>
-        <li>Colocação Pronomial</li>
-        <li>Ortografia</li>
-        <li>Verbos</li>
-        <li>Concordância</li>
-        <li>Acentuação</li>
-        <li>Partículas e Vícios de linguagem</li>
-      </ul>
-    </Modal>
-    <Modal
-      triggerId="modal-literatura_trigger"
-      title="Literatura"
-      closeText="X"
-    >
-      <ul>
-        <li>Introdução à Literatura</li>
-        <li>Gêneros Literários</li>
-        <li>Trovadorismo</li>
-        <li>Humanismo</li>
-        <li>Classicismo</li>
-        <li>Barroco</li>
-        <li>Arcadismo</li>
-        <li>Romantismo</li>
-        <li>Realismo</li>
-        <li>Naturalismo</li>
-        <li>Parnasianismo e simbolismo</li>
-        <li>Pré - Modernismo</li>
-        <li>Modernismo em Portugal</li>
-        <li>Modernismo no Brasil</li>
-        <li>Segunda geração do Modernismo no Brasil</li>
-        <li>O romance regionalista no Modernismo</li>
-        <li>João Guimarães Rosa</li>
-        <li>Clarice Lispector</li>
-        <li>João Cabral de Melo Neto</li>
-        <li>Concretismo</li>
-        <li>Ferreira Gullar</li>
-        <li>Lygia Fagundes Telles</li>
-        <li>Adélia Prado</li>
-        <li>O conto contemporâneo</li>
-        <li>O teatro do século XX</li>
-        <li>Obras específicas do edital do ITA</li>
-      </ul>
-    </Modal>
-    <Modal triggerId="modal-ingles_trigger" title="Inglês" closeText="X">
-      <ul>
-        <li>Present</li>
-        <li>Cognates and False Cognates</li>
-        <li>Connectives and Adjectives</li>
-        <li>Comparatives and Superlatives</li>
-        <li>Pronouns</li>
-        <li>Auxiliary Verbs</li>
-        <li>Punctuation Marks</li>
-        <li>Past</li>
-        <li>Reading Skills</li>
-        <li>Active and Passive Voice</li>
-        <li>Idioms</li>
-        <li>Phrasal Verbs and Prepositional Verbs</li>
-        <li>Linguistic Variation</li>
-        <li>Non Standard English</li>
-        <li>Conditional Sentences</li>
-        <li>Defining wishes Sentences</li>
-        <li>Verb Patterns</li>
-        <li>Suffixes and Prefixes</li>
-        <li>Leitura e Interpretação dos enunciados</li>
-        <li>Articles</li>
-        <li>Countable and Uncountable</li>
-        <li>Quantifiers</li>
-        <li>Future Tenses</li>
-        <li>Business English</li>
-        <li>Análise de Textos Jornalísticos</li>
-        <li>Modal Verbs</li>
-        <li>Passive voice and Participle verbs</li>
-        <li>Science Language</li>
-        <li>Relative Clauses</li>
-        <li>Reported Speech</li>
-        <li>Passive verbs</li>
-        <li>Verbal Tenses</li>
-      </ul>
-    </Modal>
-    <Modal triggerId="modal-redacao_trigger" title="Redação " closeText="X">
-      <ul>
-        <li>Introdução à Produção textual</li>
-        <li>Critérios de Correção do ITA</li>
-        <li>Como uma coletânea</li>
-        <li>Tese e planejamento</li>
-        <li>Planejamento da introdução</li>
-        <li>Planejamento do desenvolvimento</li>
-        <li>Planejamento da conclusão</li>
-        <li>Análise de parágrafos</li>
-        <li>Produção textual quinzenal</li>
-      </ul>
-    </Modal>
-    <Modal
-      triggerId="modal-produtividade_trigger"
-      title="Produtividade"
-      closeText="X"
-    >
-      <h2>Frente 1</h2>
-      <ul>
-        <li>Aritmética</li>
-        <li>Álgebra</li>
-        <li>Geometria Básica</li>
-      </ul>
-      <h2>Frente 2</h2>
-      <ul>
-        <li>Trigonometria</li>
-        <li>Números complexos</li>
-        <li>Números Binomiais</li>
-      </ul>
-      <h2>Frente 3</h2>
-      <ul>
-        <li>Geometria Plana</li>
-        <li>Geometria Analítica</li>
-        <li>Geometria Espacial</li>
-      </ul>
-      <h2>Frente 4</h2>
-      <ul>
-        <li>Sequências</li>
-        <li>Análise Combinatória</li>
-        <li>Probabilidade</li>
-        <li>Matrizes e Determinantes</li>
-      </ul>
+    <Modal triggerId="modal-ingles_trigger" closeText="X">
+      <div class="modal-main">
+        <h1>Inglês</h1>
+        <h2></h2>
+        <ul>
+          <li>Simple Present and Simple Past</li>
+          <li>Prepositional Verbs</li>
+          <li>Phrasal Verbs</li>
+          <li>Reading Skills</li>
+          <li>Connectives</li>
+        </ul>
+      </div>
     </Modal>
   </main>
 </Layout>

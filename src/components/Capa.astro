@@ -1,7 +1,24 @@
 ---
+import type { CollectionEntry } from "astro:content";
 import Botao from "./Botao.astro";
+import { Modal } from "accessible-astro-components";
 
-const { id, estilo, title, destaque, botao, link, linha } = Astro.props;
+interface Props {
+  vlink?: CollectionEntry<"produtos">;
+  id?: string;
+  estilo?: string;
+  title: string;
+  destaque?: string;
+  botao?: string;
+  video?: string;
+  link?: string;
+  linha?: boolean;
+  key?: string;
+}
+const { id, estilo, title, destaque, botao, video, vlink, link, linha, key } =
+  Astro.props;
+
+const filtro = vlink?.data.content.filter((item) => item.key === key);
 ---
 
 <section id={id} class={estilo && estilo}>
@@ -13,10 +30,26 @@ const { id, estilo, title, destaque, botao, link, linha } = Astro.props;
     </h1>
     <slot name="conteudo" />
     {
-      botao && !estilo ? (
-        <Botao estilo="grande mt-3" texto={botao} link={link} />
-      ) : botao && estilo ? (
-        <Botao estilo="claro grande mt-3" texto={botao} link={link} />
+      botao || video ? (
+        <div class="buttons mt-3">
+          {botao && !estilo ? (
+            <Botao estilo="grande" texto={botao} link={link} />
+          ) : botao && estilo ? (
+            <Botao estilo="claro grande" texto={botao} link={link} />
+          ) : null}
+          {video && <span id={key}>► {video}</span>}
+          {filtro?.map((item) => (
+            <Modal triggerId={item.key} closeText="X">
+              <iframe
+                src={item.video}
+                title="YouTube video player"
+                frameborder="0"
+                class="modal-youtube"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              />
+            </Modal>
+          ))}
+        </div>
       ) : null
     }
   </div>
@@ -92,6 +125,24 @@ const { id, estilo, title, destaque, botao, link, linha } = Astro.props;
     filter: none;
     position: relative;
   }
+  .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+  }
+  .buttons span {
+    padding: 1.2rem 1.5rem;
+    background: rgb(27 127 204 / 16%);
+    border-radius: 0.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    width: -webkit-fill-available;
+  }
+  .buttons span:hover {
+    background: rgb(27 127 204 / 32%);
+  }
   @media screen and (min-width: 768px) {
     section {
       flex-direction: row;
@@ -114,6 +165,9 @@ const { id, estilo, title, destaque, botao, link, linha } = Astro.props;
       position: absolute;
       bottom: 0;
       right: -6rem;
+    }
+    .buttons span {
+      width: auto;
     }
   }
   @media screen and (min-width: 1024px) {
@@ -146,7 +200,7 @@ const { id, estilo, title, destaque, botao, link, linha } = Astro.props;
     }
     .links a {
       display: inline-block;
-      padding: 15px 20px;
+      padding: 2rem 2rem;
     }
   }
 </style>

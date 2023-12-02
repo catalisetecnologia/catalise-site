@@ -23,9 +23,8 @@ import MateriaisValor from "../../components/MateriaisValor-BibliaITA.astro";
   <main class="container">
     <Capa
       title="A Bíblia"
-      linha="true"
+      linha
       destaque="Para o ITA"
-      botao="Baixe agora"
       link="#valor"
       estilo="capa-page"
     >
@@ -37,7 +36,7 @@ import MateriaisValor from "../../components/MateriaisValor-BibliaITA.astro";
       <Image src={capa} alt="Capa do Catálise" class="img-capa" slot="imagem" />
     </Capa>
     <Destaques destaques={destaques} page="BIBLIA-ITA" />
-    <Capa estilo="claro" title="Pare de estudar sem orientação" texto="">
+    <Capa estilo="claro" title="Pare de estudar sem orientação">
       <ul class="capa-itens" slot="conteudo">
         <li>
           <svg

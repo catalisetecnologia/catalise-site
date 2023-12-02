@@ -1,9 +1,10 @@
 ---
 import { Image } from "astro:assets";
-import Microlearning from "../img/turma itaime.png";
-import Trilhadidática from "../img/turma itaime.png";
-import EstudoPersonalizado from "../img/turma itaime.png";
-import AcompanhamentoHumanizado from "../img/turma itaime.png";
+
+import Microlearning from "../img/destaques/metodologia microlearning.svg";
+import Trilhadidática from "../img/destaques/trilha de estudos.svg";
+import EstudoPersonalizado from "../img/destaques/guia de estudo.svg";
+import AcompanhamentoHumanizado from "../img/destaques/apoio psicológico.svg";
 ---
 
 <div class="wrapper">
@@ -231,6 +232,12 @@ import AcompanhamentoHumanizado from "../img/turma itaime.png";
     justify-content: center;
     gap: 1rem;
   }
+  .tabs__panels.flow > div > div h1 {
+    font-family: var(--font-bold);
+    font-size: 2rem;
+    margin: 1rem 0;
+    color: var(--clr-green);
+  }
   @media screen and (min-width: 768px) {
     [role="tablist"] {
       justify-content: center;
@@ -242,6 +249,7 @@ import AcompanhamentoHumanizado from "../img/turma itaime.png";
     }
     .tabs__panels.flow > div > div {
       width: 50%;
+      max-width: 30rem;
       height: 100%;
       margin-top: 0rem;
     }

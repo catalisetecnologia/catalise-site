@@ -7,9 +7,11 @@ const collectionProdutos = defineCollection({
     content: z.array(
       z.object({
         img: image(),
+        key: z.string(),
         tag: z.string(),
         nome: z.string(),
         link: z.string().optional(),
+        video: z.string().url().optional(),
         page: z.array(z.string()),
       })
     ),

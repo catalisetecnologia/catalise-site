@@ -86,10 +86,11 @@ const { texto, estilo, link } = Astro.props;
   .grande {
     padding: 1.1rem 1.6rem;
     font-size: clamp(0.9rem, 1.2vw, 1rem);
+    width: -webkit-fill-available;
   }
   .pequeno {
     padding: 0.8rem 0.8rem;
-    font-size: clamp(0.9rem, 1.2vw, .8rem);;
+    font-size: clamp(0.9rem, 1.2vw, 0.8rem);
   }
   .video {
     padding: 0.8rem 0.8rem;
@@ -107,8 +108,8 @@ const { texto, estilo, link } = Astro.props;
     background: var(--clr-blue);
     filter: none;
   }
-  @media screen and (min-width: 425px) {
-    a {
+  @media screen and (min-width: 768px) {
+    .grande {
       width: max-content;
     }
   }

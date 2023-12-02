@@ -231,6 +231,22 @@ const { title, description } = Astro.props;
   .mt-4 {
     margin-top: 4rem;
   }
+  .as-l {
+    align-self: flex-start;
+  }
+  .as-r {
+    align-self: flex-end;
+  }
+  .as-c {
+    align-self: center;
+  }
+  .ai-r {
+    align-items: flex-end;
+    text-align: end !important;
+  }
+  .ai-c {
+    align-items: center;
+  }
   .contato {
     position: fixed;
     display: flex;
@@ -338,60 +354,81 @@ const { title, description } = Astro.props;
       hsl(226, 100%, 97%),
       hsl(200, 100%, 80%)
     );
-    width: clamp(20rem, 94vw, 40rem);
+    width: clamp(20rem, 94vw, 50rem);
     overflow: hidden;
+    border: 0.12rem solid hsl(0deg 0% 36.69%);
+    border-radius: 2rem;
   }
   :where(.modal) {
-    border: none !important;
   }
   .modal__inner {
   }
 
   .modal__content {
     gap: 1.5rem;
-    padding: 1rem;
     overflow: auto;
     max-height: 72vh;
     position: relative;
+    padding: 0 !important;
   }
   .modal__content h3 {
-    font-family: var(--font-bold);
-    font-size: clamp(1.3rem, 2vw, 1.8rem);
-    color: var(--font-black);
-    margin: 1rem 0;
+    display: none;
   }
   .modal__content h2 {
+    margin: 3rem 0 1rem 0;
     font-family: var(--font-book);
-    margin-top: 1rem;
-    color: var(--font-black);
+    font-size: 1.2rem;
+    color: hsl(226, 80%, 14%);
+  }
+  .modal__content h1 {
+    font-size: clamp(2rem, 4vw, 2.4rem);
+    color: hsl(226, 80%, 14%);
+    border-bottom: 0.12rem solid var(--clr-dblue);
+    padding-bottom: 1rem;
+  }
+  .modal__content p,
+  .modal__content li {
+    font-family: var(--font-light);
+    font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+    font-weight: 600;
+    color: var(--clr-black);
+  }
+  .modal__close {
+    position: fixed;
+    top: 0rem;
+    right: 0rem;
   }
   .modal__close button {
-    color: var(--clr-black) !important;
-    background-color: hsl(213, 52%, 96%, 0.4) !important;
+    color: var(--clr-green) !important;
+    background-color: hsl(226, 80%, 14%) !important;
     width: unset !important;
     padding: 0.6rem 0.8rem !important;
     position: absolute;
-    font-weight: 600;
     top: 0;
     right: 0;
-    font-size: clamp(0.9rem, 1.2vw, 1.2rem);
+    font-family: var(--font-book);
+    font-weight: 600;
+    font-size: clamp(1.4rem, 2.2vw, 1.2rem);
     line-height: 1 !important;
     border-radius: 100rem !important;
     margin: 1.8rem !important;
-    border: 0.12rem solid var(--clr-dblue) !important;
+    border: 0.2rem solid var(--clr-green) !important;
     transition: all 0.2s ease-in-out !important;
   }
-
   .modal__close:hover button,
   .modal__close:focus button {
     text-decoration: none !important;
     color: var(--clr-lblue) !important;
-    border: 0.12rem solid var(--clr-lblue) !important;
+    border: 0.2rem solid var(--clr-lblue) !important;
   }
   .modal-youtube {
     width: -webkit-fill-available;
     height: 30rem;
     border-radius: 1rem;
+  }
+  .modal-main {
+    width: -webkit-fill-available;
+    padding: 3rem;
   }
   .card {
     border: none !important;

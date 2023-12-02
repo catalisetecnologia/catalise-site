@@ -1,6 +1,7 @@
 {
   "content": [
     {
+      "key": "biblia-ita",
       "img": "../../img/materiais-card/ebook biblia para o ita.png",
       "tag": "Manual",
       "nome": "A Biblia para o ITA",
@@ -8,6 +9,7 @@
       "page": ["principal"]
     },
     {
+      "key": "bizuarios-de-quimica",
       "img": "../../img/materiais-card/ebook bizuario fisico quimica.png",
       "tag": "Bizuários",
       "nome": "Bizuários de Química",
@@ -15,6 +17,7 @@
       "page": ["principal"]
     },
     {
+      "key": "miscelaneas-ita",
       "img": "../../img/materiais-card/ebook miscelanea ita.png",
       "tag": "Miscelâneas",
       "nome": "Miscelâneas ITA",
@@ -22,6 +25,7 @@
       "page": ["principal", "MS-ITA"]
     },
     {
+      "key": "miscelaneas-ime",
       "img": "../../img/materiais-card/ebook miscelanea ime.png",
       "tag": "Miscelâneas",
       "nome": "Miscelâneas IME",
@@ -29,6 +33,7 @@
       "page": ["principal", "MS-IME"]
     },
     {
+      "key": "miscelaneas-afa",
       "img": "../../img/materiais-card/ebook miscelanea afa.png",
       "tag": "Miscelâneas",
       "nome": "Miscelâneas AFA",
@@ -36,6 +41,7 @@
       "page": ["principal", "MS-AFA"]
     },
     {
+      "key": "miscelaneas-eear",
       "img": "../../img/materiais-card/ebook miscelanea eear.png",
       "tag": "Miscelâneas",
       "nome": "Miscelâneas EEAR",
@@ -43,6 +49,7 @@
       "page": ["principal", "MS-EEAR"]
     },
     {
+      "key": "quimica-geral-1",
       "img": "../../img/materiais-card/ebook bizuario quimica geral 1.png",
       "tag": "Bizuários",
       "nome": "Quimica Geral 1",
@@ -50,6 +57,7 @@
       "page": ["volume"]
     },
     {
+      "key": "quimica-geral-2",
       "img": "../../img/materiais-card/ebook bizuario quimica geral 2.png",
       "tag": "Bizuários",
       "nome": "Quimica Geral 2",
@@ -57,6 +65,7 @@
       "page": ["volume"]
     },
     {
+      "key": "fisico-quimica",
       "img": "../../img/materiais-card/ebook bizuario fisico quimica.png",
       "tag": "Bizuários",
       "nome": "Físico Quimica",
@@ -64,6 +73,7 @@
       "page": ["volume"]
     },
     {
+      "key": "reacoes-organicas",
       "img": "../../img/materiais-card/ebook bizuario reacoes organicas.png",
       "tag": "Bizuários",
       "nome": "Reações Orgânicas",
@@ -71,6 +81,7 @@
       "page": ["volume"]
     },
     {
+      "key": "matematica-ita",
       "img": "../../img/materiais-card/ebook miscelanea matematica ita.png",
       "tag": "Miscelâneas",
       "nome": "Matemática ITA",
@@ -78,6 +89,7 @@
       "page": ["MS-ITA"]
     },
     {
+      "key": "fisica-ita",
       "img": "../../img/materiais-card/ebook miscelanea fisica ita.png",
       "tag": "Miscelâneas",
       "nome": "Física ITA",
@@ -85,6 +97,7 @@
       "page": ["MS-ITA"]
     },
     {
+      "key": "quimica-ita",
       "img": "../../img/materiais-card/ebook miscelanea quimica ita.png",
       "tag": "Miscelâneas",
       "nome": "Química ITA",
@@ -92,6 +105,7 @@
       "page": ["MS-ITA"]
     },
     {
+      "key": "matematica-ime",
       "img": "../../img/materiais-card/ebook miscelanea matematica ime.png",
       "tag": "Miscelâneas",
       "nome": "Matemática IME",
@@ -99,6 +113,7 @@
       "page": ["MS-ITA"]
     },
     {
+      "key": "fisica-ime",
       "img": "../../img/materiais-card/ebook miscelanea fisica ime.png",
       "tag": "Miscelâneas",
       "nome": "Física IME",
@@ -106,6 +121,7 @@
       "page": ["MS-IME"]
     },
     {
+      "key": "quimica-ime",
       "img": "../../img/materiais-card/ebook miscelanea quimica ime.png",
       "tag": "Miscelâneas",
       "nome": "Química IME",
@@ -113,6 +129,7 @@
       "page": ["MS-IME"]
     },
     {
+      "key": "matematica-afa",
       "img": "../../img/materiais-card/ebook miscelanea matematica afa.png",
       "tag": "Miscelâneas",
       "nome": "Matemática AFA",
@@ -120,6 +137,7 @@
       "page": ["MS-AFA"]
     },
     {
+      "key": "fisica-afa",
       "img": "../../img/materiais-card/ebook miscelanea fisica afa.png",
       "tag": "Miscelâneas",
       "nome": "Física AFA",
@@ -127,6 +145,7 @@
       "page": ["MS-AFA"]
     },
     {
+      "key": "quimica-afa",
       "img": "../../img/materiais-card/ebook miscelanea matematica eear.png",
       "tag": "Miscelâneas",
       "nome": "Matemática EEAR",
@@ -134,6 +153,7 @@
       "page": ["MS-EEAR"]
     },
     {
+      "key": "fisica-eear",
       "img": "../../img/materiais-card/ebook miscelanea fisica eear.png",
       "tag": "Miscelâneas",
       "nome": "Física EEAR",
