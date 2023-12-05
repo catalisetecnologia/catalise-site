@@ -86,36 +86,16 @@ const { title, description } = Astro.props;
     </a>
   </body>
 </html>
-<script is:inline>
-  document.addEventListener("touchstart", onTouchStart, { passive: true });
-  const autoLoadDuration = 5; //In Seconds
-  const eventList = [
-    "keydown",
-    "mousemove",
-    "wheel",
-    "touchmove",
-    "touchstart",
-    "touchend",
-  ];
-
-  const autoLoadTimeout = setTimeout(runScripts, autoLoadDuration * 1000);
-
-  eventList.forEach(function (event) {
-    window.addEventListener(event, triggerScripts, { passive: true });
-  });
-
-  function triggerScripts() {
-    runScripts();
-    clearTimeout(autoLoadTimeout);
-    eventList.forEach(function (event) {
-      window.removeEventListener(event, triggerScripts, { passive: true });
-    });
+<script>
+  // Adicionando um event listener de rolagem globalmente
+  function handleScroll(e) {
+    // Seu código de manipulação de rolagem aqui
   }
 
-  function runScripts() {
-    document.querySelectorAll("script[delay]").forEach(function (scriptTag) {
-      scriptTag.setAttribute("src", scriptTag.getAttribute("delay"));
-    });
+  // Adicionando o listener no evento de montagem do componente
+  $: {
+    // Adiciona o event listener
+    window.addEventListener("scroll", handleScroll, { passive: true });
   }
 </script>
 <style is:global>
