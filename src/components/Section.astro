@@ -24,6 +24,7 @@ import Link from "./Link.astro";
     width: 100%;
     position: relative;
     z-index: 2;
+    overflow: hidden;
   }
   section > div:first-child {
     display: flex;
@@ -43,7 +44,7 @@ import Link from "./Link.astro";
     place-items: center;
     place-content: center;
     margin-top: 2rem;
-    overflow: hidden;
+    overflow: unset;
   }
   .col3 {
     display: grid;
@@ -68,7 +69,7 @@ import Link from "./Link.astro";
     );
     border-radius: 2rem;
     width: calc(85vw - 2rem);
-    padding: 3rem 3rem;
+    padding: 3rem;
     color: var(--clr-black);
     box-shadow:
       -2rem -2rem 8rem hsl(215, 100%, 30%),
@@ -96,11 +97,13 @@ import Link from "./Link.astro";
     color: var(--clr-blue);
   }
   .centro {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     text-align: center;
     place-content: center;
     place-items: center;
+    padding: 3rem;
+    width: -webkit-fill-available;
   }
 
   .centro > div:first-child {
