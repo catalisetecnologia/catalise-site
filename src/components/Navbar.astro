@@ -12,8 +12,9 @@ import Botao from "./Botao.astro";
   <MenuMobile />
   <div class="links">
     <a href="/">
-      <Image src={logo} alt="Logo do Catálise" class="log logo-mobile" />
+      <Image src={logo} alt="Logo do Catálise" class="logo logo-mobile" />
     </a>
+    <a href="/produtos" class="link no-dropdown">Nossos produtos</a>
     <a class="link dropdown">Nossos produtos</a>
     <div class="dropdown-links">
       <div class="description">
@@ -45,7 +46,7 @@ import Botao from "./Botao.astro";
     <a href="/parcerias" class="link">Plano Escolas</a>
     <a
       href="https://api.whatsapp.com/send?phone=5512997364916&text=Ol%C3%A1!%20Gostaria%20de%20ajuda"
-      class="link">Contato</a
+      class="link mb-6">Contato</a
     >
     <div class="social">
       <ul>
@@ -158,8 +159,6 @@ import Botao from "./Botao.astro";
     divs[0].classList.remove("active");
     divs[1].classList.add("active");
   }
-
-
 </script>
 
 <style scoped>
@@ -214,9 +213,6 @@ import Botao from "./Botao.astro";
   }
   .desktop a:nth-child(2) {
     margin-top: 2rem;
-  }
-  .desktop a:nth-child(5) {
-    margin-bottom: 6rem;
   }
   .social ul {
     display: flex;
@@ -298,6 +294,12 @@ import Botao from "./Botao.astro";
     border-radius: 100rem;
     width: 11rem;
   }
+  nav .links .dropdown {
+    display: none;
+  }
+  nav .links .no-dropdown {
+    display: unset;
+  }
   .dropdown:hover ~ .dropdown-links {
     display: flex;
   }
@@ -306,6 +308,9 @@ import Botao from "./Botao.astro";
   }
   .link:has(+ .dropdown-links:hover) {
     color: var(--clr-green);
+  }
+  .mb-6 {
+    margin-bottom: 6rem;
   }
   @media screen and (min-width: 768px) {
     .links {
@@ -323,6 +328,15 @@ import Botao from "./Botao.astro";
     }
     .links .logo-mobile {
       display: none;
+    }
+    nav .links .dropdown {
+      display: unset;
+    }
+    nav .links .no-dropdown {
+      display: none;
+    }
+    .mb-6 {
+      margin-bottom: 0rem;
     }
   }
 </style>

@@ -14,6 +14,7 @@ const { turmas, estilo, swiper, page } = Astro.props;
 
 const filtro = turmas.data.content.filter((item) => item.page.includes(page));
 ---
+
 {
   !swiper &&
     filtro.map((material) => (
@@ -88,19 +89,20 @@ const filtro = turmas.data.content.filter((item) => item.page.includes(page));
       prevEl: ".swiper-button-prev",
     },
     breakpoints: {
-      1026: {
-        slidesPerView: "auto",
+      520: {
+        slidesPerView: 2,
         spaceBetween: 24,
-        centeredSlides: false,
+        centeredSlides: true,
       },
       768: {
         slidesPerView: 3.1,
         spaceBetween: 24,
         centeredSlides: false,
       },
-      520: {
-        slidesPerView: 2,
+      1026: {
+        slidesPerView: "auto",
         spaceBetween: 24,
+        centeredSlides: false,
       },
     },
   });
@@ -110,7 +112,7 @@ const filtro = turmas.data.content.filter((item) => item.page.includes(page));
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 80%;
     margin-top: 1.6rem;
   }
   .swiper-wrapper {
