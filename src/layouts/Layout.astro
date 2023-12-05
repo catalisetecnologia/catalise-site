@@ -19,12 +19,13 @@ const { title, description } = Astro.props;
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link />
     <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/fonts/Gotham-Book.woff2"
+      crossorigin
     />
-
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
@@ -85,6 +86,30 @@ const { title, description } = Astro.props;
     </a>
   </body>
 </html>
+<script>
+const autoLoadDuration = 5; //In Seconds
+const eventList = ["keydown", "mousemove", "wheel", "touchmove", "touchstart", "touchend"];
+
+const autoLoadTimeout = setTimeout(runScripts, autoLoadDuration * 1000);
+
+eventList.forEach(function(event) {
+    window.addEventListener(event, triggerScripts, { passive: true })
+});
+
+function triggerScripts() {
+    runScripts();
+    clearTimeout(autoLoadTimeout);
+    eventList.forEach(function(event) {
+         window.removeEventListener(event, triggerScripts, { passive: true });
+    });
+}
+
+function runScripts() {
+    document.querySelectorAll("script[delay]").forEach(function(scriptTag) {
+        scriptTag.setAttribute("src", scriptTag.getAttribute("delay"));
+    });
+}
+</script>
 <style is:global>
   @font-face {
     font-family: "GothamSSm-Light";
@@ -103,10 +128,10 @@ const { title, description } = Astro.props;
     src: url("/fonts/Gotham-Black.woff2") format("woff2");
   }
   :root {
-    --font-light: GothamSSm-Light;
+    --font-light: GothamSSm-Light, GothamSSm-Book;
     --font-book: GothamSSm-Book;
-    --font-bold: GothamSSm-Bold;
-    --font-black: GothamSSm-Black;
+    --font-bold: GothamSSm-Bold, GothamSSm-Book;
+    --font-black: GothamSSm-Black, GothamSSm-Book;
 
     --clr-black: hsla(197, 9%, 16%, 1);
     --clr-white: hsl(210, 33%, 99%);
