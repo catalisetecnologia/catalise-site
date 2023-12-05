@@ -15,7 +15,7 @@ import Botao from "./Botao.astro";
       <Image src={logo} alt="Logo do Catálise" class="logo logo-mobile" />
     </a>
     <a href="/produtos" class="link no-dropdown">Nossos produtos</a>
-    <a class="link dropdown">Nossos produtos</a>
+    <p class="link dropdown">Nossos produtos</p>
     <div class="dropdown-links">
       <div class="description">
         <h1>Confira nossos produtos!</h1>
@@ -162,8 +162,11 @@ import Botao from "./Botao.astro";
 </script>
 
 <style scoped>
-  a {
+  .link {
     cursor: pointer;
+    color: var(--clr-white);
+    line-height: 1;
+    font-size: unset;
   }
   .logo {
     width: 9rem;
@@ -187,10 +190,12 @@ import Botao from "./Botao.astro";
   .link:focus {
     color: var(--clr-green);
   }
-  .links a.active {
+  .links a.active,
+  .links p.active {
     color: var(--clr-green);
   }
-  .links a:first-child {
+  .links a:first-child,
+  .links p:first-child {
     display: block;
   }
   .desktop {
@@ -319,9 +324,10 @@ import Botao from "./Botao.astro";
       width: auto;
       margin-top: -0.3rem;
     }
-    .links a {
+    .links .link {
       display: inline-block;
       padding: 2rem 2rem;
+      font-family: var(--font-book);
     }
     .links .social {
       display: none;

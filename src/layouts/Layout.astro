@@ -86,29 +86,36 @@ const { title, description } = Astro.props;
     </a>
   </body>
 </html>
-<script>
-const autoLoadDuration = 5; //In Seconds
-const eventList = ["keydown", "mousemove", "wheel", "touchmove", "touchstart", "touchend"];
+<script is:inline>
+  const autoLoadDuration = 5; //In Seconds
+  const eventList = [
+    "keydown",
+    "mousemove",
+    "wheel",
+    "touchmove",
+    "touchstart",
+    "touchend",
+  ];
 
-const autoLoadTimeout = setTimeout(runScripts, autoLoadDuration * 1000);
+  const autoLoadTimeout = setTimeout(runScripts, autoLoadDuration * 1000);
 
-eventList.forEach(function(event) {
-    window.addEventListener(event, triggerScripts, { passive: true })
-});
+  eventList.forEach(function (event) {
+    window.addEventListener(event, triggerScripts, { passive: true });
+  });
 
-function triggerScripts() {
+  function triggerScripts() {
     runScripts();
     clearTimeout(autoLoadTimeout);
-    eventList.forEach(function(event) {
-         window.removeEventListener(event, triggerScripts, { passive: true });
+    eventList.forEach(function (event) {
+      window.removeEventListener(event, triggerScripts, { passive: true });
     });
-}
+  }
 
-function runScripts() {
-    document.querySelectorAll("script[delay]").forEach(function(scriptTag) {
-        scriptTag.setAttribute("src", scriptTag.getAttribute("delay"));
+  function runScripts() {
+    document.querySelectorAll("script[delay]").forEach(function (scriptTag) {
+      scriptTag.setAttribute("src", scriptTag.getAttribute("delay"));
     });
-}
+  }
 </script>
 <style is:global>
   @font-face {
