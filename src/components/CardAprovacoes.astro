@@ -19,7 +19,7 @@ const { aprovados, page, direction } = Astro.props;
       <div class="swiper-wrapper">
         {aprovados.data.content.map((aprovado) => (
           <div class="swiper-slide">
-            <a id={aprovado.id} target="_blank" class="card">
+            <a aria-label="saiba mais" id={aprovado.id} target="_blank" class="card">
               <div class="capa">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
