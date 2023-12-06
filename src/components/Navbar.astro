@@ -25,11 +25,12 @@ import Botao from "./Botao.astro";
         <a aria-label="nossos produtos" href="/produtos">Saiba mais</a>
       </div>
       <div class="produtos-links">
-        <a aria-label="nossas turmas" class="produtos-link link active"
-          >Turmas</a
-        >
-        <a aria-label="nossos materiais" class="produtos-link link">Materiais</a
-        >
+        <p aria-label="nossas turmas" class="produtos-link link active">
+          Turmas
+        </p>
+        <p aria-label="nossos materiais" class="produtos-link link">
+          Materiais
+        </p>
       </div>
       <div class="produtos-links-produtos active">
         <a aria-label="turma ita-ime" class="link" href="/produtos/ita-ime"
@@ -84,7 +85,9 @@ import Botao from "./Botao.astro";
       </div>
     </div>
     <a aria-label="quem somos" href="/sobre" class="link">Quem somos</a>
-    <a aria-label="plano escolas" href="/parcerias" class="link">Plano Escolas</a>
+    <a aria-label="plano escolas" href="/parcerias" class="link"
+      >Plano Escolas</a
+    >
     <a
       href="https://api.whatsapp.com/send?phone=5512997364916&text=Ol%C3%A1!%20Gostaria%20de%20ajuda"
       class="link mb-6">Contato</a
@@ -317,7 +320,6 @@ import Botao from "./Botao.astro";
     border-right: 0.12rem solid hsl(210deg 33% 99% / 15%);
   }
   .dropdown-links .description a {
-    margin-top: 1rem;
     color: var(--clr-green);
   }
   .dropdown-links .produtos-links {
@@ -339,10 +341,12 @@ import Botao from "./Botao.astro";
     font-family: var(--font-book);
     font-size: clamp(0.9rem, 1.5vw, 1rem);
   }
-  .links .dropdown-links a {
+  .links .dropdown-links a,
+  .links .dropdown-links p {
     padding: 0.5rem 0;
   }
-  .links .dropdown-links a.active {
+  .links .dropdown-links a.active,
+  .links .dropdown-links p.active {
     position: relative;
     right: 1rem;
     background: hsl(219.31deg 80.56% 14.12% / 60%);
@@ -377,9 +381,10 @@ import Botao from "./Botao.astro";
     }
     .links .link {
       display: inline-block;
-      padding: 2rem 2rem;
+      padding: 2rem;
       font-family: var(--font-book);
     }
+
     .links .social {
       display: none;
     }
