@@ -3,7 +3,7 @@ const { texto, estilo, link } = Astro.props;
 //claro, outline-claro, outline-escuro, grande, pequeno
 ---
 
-<a aria-label="saiba mais" href={link} class={estilo}>{texto}</a>
+<a aria-label={texto} href={link} class={estilo}>{texto}</a>
 <style scoped>
   a {
     display: block;
