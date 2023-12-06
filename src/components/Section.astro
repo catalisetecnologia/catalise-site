@@ -141,8 +141,8 @@ import Link from "./Link.astro";
       width: -webkit-fill-available;
     }
     section > div:first-child div:first-child {
-    max-width: 32rem;
-  }
+      max-width: 32rem;
+    }
   }
   @media screen and (min-width: 1026px) {
     .claro {
@@ -150,11 +150,15 @@ import Link from "./Link.astro";
       grid-template-columns: 1fr 1fr;
       gap: 6rem;
       place-content: center;
-      padding: 5rem 6rem;
       width: clamp(20rem, 80vw, 75rem);
+      padding: 5rem 6rem;
+    }
+    .claro.centro {
+      padding: 5rem 6rem;
     }
     .centro {
       grid-template-columns: 1fr;
+      padding: 0;
     }
     .claro > div:first-child {
       max-width: 26rem;
