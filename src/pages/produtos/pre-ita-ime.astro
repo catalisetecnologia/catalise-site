@@ -17,7 +17,7 @@ import Cardserv from "../../components/Cardserv.astro";
 import CardDepoimentos from "../../components/CardDepoimentos.astro";
 
 import capa from "../../img/turma itaime.png";
-import beneficios from "../../img/beneficios-1.png";
+import video from "../../img/Desvende os segredos - ITA IME.png";
 import materiais from "../../img/materiais.png";
 
 import { getEntry } from "astro:content";
@@ -38,19 +38,22 @@ const serv = await getEntry("produtos", "serv");
       botao="Quero entrar na lista de espera"
       link="https://docs.google.com/forms/d/e/1FAIpQLSfFRc6S22ES5b7-WSI99vGcFscK2hfph9BAurTR_BLdQr9gvQ/viewform?usp=sf_link"
       estilo="capa-page"
-      video="Conheça a turma"
-      vlink={turmas}
-      key="pre-ita-ime"
     >
       <p class="txt-capa" slot="conteudo">
-        Descubra o caminho da aprovação com nossa turma ITA/IME! Você não
+        Descubra o caminho da aprovação com nossa turma Pré ITA/IME! Você não
         precisa esperar para aprender tudo o que precisa para conquistar os seus
         sonhos!
       </p>
       <Image src={capa} alt="Capa do Catálise" class="img-capa" slot="imagem" />
     </Capa>
     <Destaques destaques={destaques} page="PRE-ITA-IME" />
-    <Capa estilo="claro" title="Comece sua preparação ainda no Ensino médio">
+    <Section
+      estilo="claro"
+      titulo="Comece sua preparação ainda no Ensino médio"
+      video
+      vlink={turmas}
+      key="pre-ita-ime"
+    >
       <ul class="capa-itens" slot="conteudo">
         <li>
           <svg
@@ -105,14 +108,8 @@ const serv = await getEntry("produtos", "serv");
            E muito mais!
         </li>
       </ul>
-      <Image
-        src={beneficios}
-        alt="Capa do Catálise"
-        class="img-capa-material"
-        slot="imagem"
-        quality="max"
-      />
-    </Capa>
+      <Image src={video} alt="Capa do Catálise" class="img-capa-video" />
+    </Section>
     <Section
       estilo="centro"
       colunas="col4"
@@ -128,7 +125,10 @@ const serv = await getEntry("produtos", "serv");
           <li>Geometria Básica</li>
           <li>Conjuntos</li>
         </ul>
-        <button aria-label="Veja mais" id="modal-matematica_trigger" class="btn-tema">Veja mais</button
+        <button
+          aria-label="Veja mais"
+          id="modal-matematica_trigger"
+          class="btn-tema">Veja mais</button
         >
       </div>
       <div class="tema">
@@ -139,7 +139,11 @@ const serv = await getEntry("produtos", "serv");
           <li>Cinemática</li>
           <li>Dinâmica</li>
         </ul>
-        <button aria-label="Veja mais" id="modal-fisica_trigger" class="btn-tema">Veja mais</button>
+        <button
+          aria-label="Veja mais"
+          id="modal-fisica_trigger"
+          class="btn-tema">Veja mais</button
+        >
       </div>
       <div class="tema">
         <h2>Química</h2>
@@ -149,7 +153,11 @@ const serv = await getEntry("produtos", "serv");
           <li>Modelos atômicos</li>
           <li>Tabela periódica</li>
         </ul>
-        <button aria-label="Veja mais" id="modal-quimica_trigger" class="btn-tema">Veja mais</button>
+        <button
+          aria-label="Veja mais"
+          id="modal-quimica_trigger"
+          class="btn-tema">Veja mais</button
+        >
       </div>
       <div class="tema">
         <h2>Língua Portuguesa</h2>
@@ -159,7 +167,11 @@ const serv = await getEntry("produtos", "serv");
           <li>Gêneros Textuais</li>
           <li>Figuras de Linguagem</li>
         </ul>
-        <button aria-label="Veja mais" id="modal-portugues_trigger" class="btn-tema">Veja mais</button>
+        <button
+          aria-label="Veja mais"
+          id="modal-portugues_trigger"
+          class="btn-tema">Veja mais</button
+        >
       </div>
       <div class="tema">
         <h2>Literatura</h2>
@@ -169,7 +181,10 @@ const serv = await getEntry("produtos", "serv");
           <li>Trovadorismo</li>
           <li>Humanismo</li>
         </ul>
-        <button aria-label="Veja mais" id="modal-literatura_trigger" class="btn-tema">Veja mais</button
+        <button
+          aria-label="Veja mais"
+          id="modal-literatura_trigger"
+          class="btn-tema">Veja mais</button
         >
       </div>
       <div class="tema">
@@ -180,7 +195,11 @@ const serv = await getEntry("produtos", "serv");
           <li>Connectives and Adjectives</li>
           <li>Pronouns</li>
         </ul>
-        <button aria-label="Veja mais" id="modal-ingles_trigger" class="btn-tema">Veja mais</button>
+        <button
+          aria-label="Veja mais"
+          id="modal-ingles_trigger"
+          class="btn-tema">Veja mais</button
+        >
       </div>
       <div class="tema">
         <h2>Redação</h2>
@@ -190,7 +209,11 @@ const serv = await getEntry("produtos", "serv");
           <li>Como uma coletânea</li>
           <li>Tese e planejamento</li>
         </ul>
-        <button aria-label="Veja mais" id="modal-redacao_trigger" class="btn-tema">Veja mais</button>
+        <button
+          aria-label="Veja mais"
+          id="modal-redacao_trigger"
+          class="btn-tema">Veja mais</button
+        >
       </div>
       <div class="tema">
         <h2>Produtividade</h2>
@@ -200,16 +223,18 @@ const serv = await getEntry("produtos", "serv");
           <li>Mindset do aluno aprovado</li>
           <li>Foco</li>
         </ul>
-        <button aria-label="Veja mais" id="modal-produtividade_trigger" class="btn-tema"
-          >Veja mais</button
+        <button
+          aria-label="Veja mais"
+          id="modal-produtividade_trigger"
+          class="btn-tema">Veja mais</button
         >
       </div>
     </Section>
     <Capa estilo="claro" title="Material didático">
       <div slot="conteudo">
         <p class="txt-capa-claro">
-          Entrando para a Turma ITA-IME você terá acesso a materiais didáticos
-          criados para auxiliar na sua aprendizagem:
+          Entrando para a Turma Pré ITA-IME você terá acesso a materiais
+          didáticos criados para auxiliar na sua aprendizagem:
         </p>
         <ul class="mt-2">
           <li>Bizuários de Química para o ITA</li>
@@ -293,7 +318,7 @@ const serv = await getEntry("produtos", "serv");
         <div>
           <h2>Estude em grupo<br />com amigos</h2>
           <p>
-            Conheça na nossa comunidade pessoas que caminham para a aprovação.
+            Conheça nossa comunidade de alunos que caminham para a aprovação.
           </p>
         </div>
       </div>
@@ -322,7 +347,7 @@ const serv = await getEntry("produtos", "serv");
         <div>
           <h2>Receba todo o<br />suporte necessário</h2>
           <p>
-            Com nossos mentorias e apoio da coordenação tudo ficará mais fácil.
+            Com nossas mentorias e apoio da coordenação tudo ficará mais fácil.
           </p>
         </div>
       </div>

@@ -13,7 +13,7 @@ import Cardserv from "../../components/Cardserv.astro";
 import CardDepoimentos from "../../components/CardDepoimentos.astro";
 
 import capa from "../../img/turma eear.png";
-import beneficios from "../../img/beneficios-1.png";
+import video from "../../img/Desvende os segredos - EEARr.png";
 import materiais from "../../img/materiais.png";
 
 import { getEntry } from "astro:content";
@@ -33,9 +33,6 @@ const serv = await getEntry("produtos", "serv");
       botao="Quero me matricular"
       link="#matricula"
       estilo="capa-page"
-      video="Conheça a turma"
-      vlink={turmas}
-      key="eear"
     >
       <p class="txt-capa" slot="conteudo">
         Descubra o caminho da aprovação com nossa turma EEAR! Aqui você vai
@@ -44,7 +41,13 @@ const serv = await getEntry("produtos", "serv");
       <Image src={capa} alt="Capa do Catálise" class="img-capa" slot="imagem" />
     </Capa>
     <Destaques destaques={destaques} page="EEAR" />
-    <Capa estilo="claro" title="Desvende os segredos da aprovação na EEAR">
+    <Section
+      estilo="claro"
+      titulo="Desvende os segredos da aprovação na EEAR"
+      video
+      vlink={turmas}
+      key="eear"
+    >
       <ul class="capa-itens" slot="conteudo">
         <li>
           <svg
@@ -99,14 +102,8 @@ const serv = await getEntry("produtos", "serv");
            E muito mais!
         </li>
       </ul>
-      <Image
-        src={beneficios}
-        alt="Capa do Catálise"
-        class="img-capa-material"
-        slot="imagem"
-        quality="max"
-      />
-    </Capa>
+      <Image src={video} alt="Capa do Catálise" class="img-capa-video" />
+    </Section>
     <Section
       estilo="centro"
       colunas="col3"
@@ -122,7 +119,10 @@ const serv = await getEntry("produtos", "serv");
           <li>Geometria Básica</li>
           <li>Conjuntos</li>
         </ul>
-        <button aria-label="Veja mais" id="modal-matematica_trigger" class="btn-tema">Veja mais</button
+        <button
+          aria-label="Veja mais"
+          id="modal-matematica_trigger"
+          class="btn-tema">Veja mais</button
         >
       </div>
 
@@ -134,7 +134,11 @@ const serv = await getEntry("produtos", "serv");
           <li>Cinemática</li>
           <li>Dinâmica</li>
         </ul>
-        <button aria-label="Veja mais" id="modal-fisica_trigger" class="btn-tema">Veja mais</button>
+        <button
+          aria-label="Veja mais"
+          id="modal-fisica_trigger"
+          class="btn-tema">Veja mais</button
+        >
       </div>
 
       <div class="tema">
@@ -145,7 +149,10 @@ const serv = await getEntry("produtos", "serv");
           <li>Tipologia Textual</li>
           <li>Gêneros Textuais</li>
         </ul>
-        <button aria-label="Veja mais" id="modal-portuguesa_trigger" class="btn-tema">Veja mais</button
+        <button
+          aria-label="Veja mais"
+          id="modal-portuguesa_trigger"
+          class="btn-tema">Veja mais</button
         >
       </div>
 
@@ -157,7 +164,11 @@ const serv = await getEntry("produtos", "serv");
           <li>Connectives and Adjectives</li>
           <li>Comparatives and Superlatives</li>
         </ul>
-        <button aria-label="Veja mais" id="modal-inglesa_trigger" class="btn-tema">Veja mais</button>
+        <button
+          aria-label="Veja mais"
+          id="modal-inglesa_trigger"
+          class="btn-tema">Veja mais</button
+        >
       </div>
 
       <div class="tema">
@@ -168,8 +179,10 @@ const serv = await getEntry("produtos", "serv");
           <li>Mindset do aluno aprovado</li>
           <li>Foco</li>
         </ul>
-        <button aria-label="Veja mais" id="modal-produtividade_trigger" class="btn-tema"
-          >Veja mais</button
+        <button
+          aria-label="Veja mais"
+          id="modal-produtividade_trigger"
+          class="btn-tema">Veja mais</button
         >
       </div>
     </Section>
@@ -287,7 +300,7 @@ const serv = await getEntry("produtos", "serv");
         <div>
           <h2>Receba todo o<br />suporte necessário</h2>
           <p>
-            Com nossos mentorias e apoio da coordenação tudo ficará mais fácil.
+            Com nossas mentorias e apoio da coordenação tudo ficará mais fácil.
           </p>
         </div>
       </div>

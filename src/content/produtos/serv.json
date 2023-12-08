@@ -11,7 +11,7 @@
       "key": "correção-de-redação",
       "img": "../../img/destaques/correção de redação.svg",
       "tag": "Correção de Redações",
-      "nome": "Você terá a correção de duas redações por mês de fevereiro até a prova do ITA, sem contar com as seis redações.",
+      "nome": "Você terá a correção de duas redações por mês de fevereiro até a prova do ITA, sem contar com as seis redações dos simulados.",
       "page": ["ITA-IME"]
     },
     {
@@ -39,14 +39,14 @@
       "key": "apoiar-psicológico",
       "img": "../../img/destaques/apoio psicológico.svg",
       "tag": "Apoio psicológico",
-      "nome": "Teremos uma Roda de Conversa com nossa psicóloga, experiente em acompanhar alunos que se preparam para o ITA",
+      "nome": "Teremos uma Roda de Conversa com nossa psicóloga, experiente em acompanhar alunos que se preparam para o ITA.",
       "page": ["REVISAO ITA"]
     },
     {
       "key": "28-anos-por-assunto",
       "img": "../../img/destaques/28 anos por assunto.svg",
       "tag": "28 anos por assunto",
-      "nome": "Tenha 28 anos de provas do ITA de Física, Química e Matemática divididas por assunto para você focar no que mas precisa",
+      "nome": "Tenha 28 anos de provas do ITA de Física, Química e Matemática divididas por assunto para você focar no que mas precisa.",
       "page": ["REVISAO ITA"]
     },
     {
@@ -67,7 +67,7 @@
       "key": "relatório-de-desempenho",
       "img": "../../img/destaques/relatório de desempenho.svg",
       "tag": "Relatório de desempenho",
-      "nome": "Após o simulado receba um relatório de desempenho individual, acompanhe sua evolução por matéria e descubra o que mais você precisa aprender por matéria",
+      "nome": "Após o simulado receba um relatório de desempenho individual, acompanhe sua evolução por matéria e descubra o que mais você precisar.",
       "page": ["EEAR"]
     },
     {

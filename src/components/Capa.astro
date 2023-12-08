@@ -4,21 +4,15 @@ import Botao from "./Botao.astro";
 import { Modal } from "accessible-astro-components";
 
 interface Props {
-  vlink?: CollectionEntry<"produtos">;
   id?: string;
   estilo?: string;
   title: string;
   destaque?: string;
-  botao?: string;
-  video?: string;
-  link?: string;
   linha?: boolean;
-  key?: string;
+  botao?: string;
+  link?: string;
 }
-const { id, estilo, title, destaque, botao, video, vlink, link, linha, key } =
-  Astro.props;
-
-const filtro = vlink?.data.content.filter((item) => item.key === key);
+const { id, estilo, title, destaque, botao, link, linha } = Astro.props;
 ---
 
 <section id={id} class={estilo && estilo}>
@@ -30,25 +24,15 @@ const filtro = vlink?.data.content.filter((item) => item.key === key);
     </h1>
     <slot name="conteudo" />
     {
-      botao || video ? (
+      botao && (
         <div class="buttons mt-3">
           {botao && !estilo ? (
             <Botao estilo="grande" texto={botao} link={link} />
           ) : botao && estilo ? (
             <Botao estilo="claro grande" texto={botao} link={link} />
           ) : null}
-          {video && <span id={key}>► {video}</span>}
-          {filtro?.map((item) => (
-            <Modal triggerId={item.key} closeText="X">
-              <div class="wrapper">
-                <div class="youtube" data-embed={item.video}>
-                  <div class="play-button" />
-                </div>
-              </div>
-            </Modal>
-          ))}
         </div>
-      ) : null
+      )
     }
   </div>
   <div class="capa">
@@ -56,43 +40,7 @@ const filtro = vlink?.data.content.filter((item) => item.key === key);
   </div>
 </section>
 
-<script>
-  (function () {
-    var youtube = document.querySelectorAll(".youtube");
-
-    for (var i = 0; i < youtube.length; i++) {
-      var source =
-        "https://img.youtube.com/vi/" +
-        youtube[i].dataset.embed +
-        "/sddefault.jpg";
-
-      var image = new Image();
-      image.src = source;
-      image.addEventListener(
-        "load",
-        (function () {
-          youtube[i].appendChild(image);
-        })(i)
-      );
-
-      youtube[i].addEventListener("click", function () {
-        var iframe = document.createElement("iframe");
-
-        iframe.setAttribute("frameborder", "0");
-        iframe.setAttribute("allowfullscreen", "");
-        iframe.setAttribute(
-          "src",
-          "https://www.youtube.com/embed/" +
-            this.dataset.embed +
-            "?rel=0&showinfo=0&autoplay=1"
-        );
-
-        this.innerHTML = "";
-        this.appendChild(iframe);
-      });
-    }
-  })();
-</script>
+<script></script>
 
 <style scoped>
   section {
@@ -179,6 +127,7 @@ const filtro = vlink?.data.content.filter((item) => item.key === key);
   .buttons span:hover {
     background: rgb(27 127 204 / 32%);
   }
+
   @media screen and (min-width: 768px) {
     section {
       flex-direction: row;

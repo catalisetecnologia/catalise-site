@@ -17,7 +17,7 @@ import Cardserv from "../../components/Cardserv.astro";
 import CardDepoimentos from "../../components/CardDepoimentos.astro";
 
 import capa from "../../img/turma eear.png";
-import beneficios from "../../img/beneficios-2.png";
+import video from "../../img/Desvende os segredos - Revisão EEAR.png";
 import materiais from "../../img/materiais.png";
 
 import { getEntry } from "astro:content";
@@ -37,9 +37,6 @@ const serv = await getEntry("produtos", "serv");
       botao="Quero entrar na lista de espera"
       link="https://docs.google.com/forms/d/e/1FAIpQLSct9odG9fl_V-mrOsxAmm_gVQ8OG_GGcYq0cKU6_B6nV4Hogg/viewform?usp=sf_link"
       estilo="capa-page"
-      video="Conheça a turma"
-      vlink={turmas}
-      key="revisao-eear"
     >
       <p class="txt-capa" slot="conteudo">
         Aproveite a reta final da prova da ITA para construir o diferencial da
@@ -49,7 +46,13 @@ const serv = await getEntry("produtos", "serv");
       <Image src={capa} alt="Capa do Catálise" class="img-capa" slot="imagem" />
     </Capa>
     <Destaques destaques={destaques} page="REVISAO EEAR" />
-    <Capa estilo="claro" title="Garanta sua aprovação nesta reta final">
+    <Section
+      estilo="claro"
+      titulo="Garanta sua aprovação nesta reta final"
+      video
+      vlink={turmas}
+      key="revisao-eear"
+    >
       <ul class="capa-itens" slot="conteudo">
         <li>
           <svg
@@ -104,14 +107,8 @@ const serv = await getEntry("produtos", "serv");
            E muito mais!
         </li>
       </ul>
-      <Image
-        src={beneficios}
-        alt="Capa do Catálise"
-        class="img-capa-material"
-        slot="imagem"
-        quality="max"
-      />
-    </Capa>
+      <Image src={video} alt="Capa do Catálise" class="img-capa-video" />
+    </Section>
     <Section
       estilo="centro"
       colunas="col4"
@@ -127,7 +124,10 @@ const serv = await getEntry("produtos", "serv");
           <li>Geometria Plana</li>
           <li>Trigonometria</li>
         </ul>
-        <button aria-label="Veja mais" id="modal-matematica_trigger" class="btn-tema">Veja mais</button
+        <button
+          aria-label="Veja mais"
+          id="modal-matematica_trigger"
+          class="btn-tema">Veja mais</button
         >
       </div>
       <div class="tema">
@@ -138,7 +138,11 @@ const serv = await getEntry("produtos", "serv");
           <li>Eletrodinâmica</li>
           <li>Magnetismo</li>
         </ul>
-        <button aria-label="Veja mais" id="modal-fisica_trigger" class="btn-tema">Veja mais</button>
+        <button
+          aria-label="Veja mais"
+          id="modal-fisica_trigger"
+          class="btn-tema">Veja mais</button
+        >
       </div>
       <div class="tema">
         <h2>Português</h2>
@@ -148,7 +152,11 @@ const serv = await getEntry("produtos", "serv");
           <li>Concordância nominal</li>
           <li>Acentuação</li>
         </ul>
-        <button aria-label="Veja mais" id="modal-portugues_trigger" class="btn-tema">Veja mais</button>
+        <button
+          aria-label="Veja mais"
+          id="modal-portugues_trigger"
+          class="btn-tema">Veja mais</button
+        >
       </div>
       <div class="tema">
         <h2>Inglês</h2>
@@ -158,9 +166,12 @@ const serv = await getEntry("produtos", "serv");
           <li>Phrasal Verbs</li>
           <li>Reading Skills</li>
         </ul>
-        <button aria-label="Veja mais" id="modal-ingles_trigger" class="btn-tema">Veja mais</button>
+        <button
+          aria-label="Veja mais"
+          id="modal-ingles_trigger"
+          class="btn-tema">Veja mais</button
+        >
       </div>
-     
     </Section>
     <Capa estilo="claro" title="Material didático">
       <div slot="conteudo">

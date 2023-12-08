@@ -331,6 +331,13 @@ const { title, description } = Astro.props;
     margin-bottom: -5rem;
     margin-right: 0rem;
   }
+  .img-capa-video {
+    width: inherit;
+    object-fit: cover;
+    height: -webkit-fill-available;
+    border-radius: 1rem;
+    margin-top: 1rem;
+  }
   .img-capa-valor {
     display: none;
   }
@@ -437,6 +444,10 @@ const { title, description } = Astro.props;
     color: var(--clr-lblue) !important;
     border: 0.2rem solid var(--clr-lblue) !important;
   }
+  .modal__close button:hover,
+  .modal__close button:focus {
+    text-decoration: none !important;
+  }
   .modal-youtube {
     width: -webkit-fill-available;
     height: 30rem;
@@ -466,7 +477,7 @@ const { title, description } = Astro.props;
   .wrapper {
     width: 100%;
   }
-  
+
   .youtube {
     width: 100% !important ;
     background-color: #000;
@@ -550,6 +561,10 @@ const { title, description } = Astro.props;
       width: auto;
       margin-bottom: 0;
       margin-right: 0;
+    }
+    .img-capa-video {
+      width: clamp(20rem, 43vw, 40rem);
+      margin: -2rem -3rem;
     }
   }
 </style>

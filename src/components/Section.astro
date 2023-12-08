@@ -1,7 +1,39 @@
 ---
-const { estilo, titulo, subtitulo, tag, botao, link, colunas } = Astro.props;
+import type { CollectionEntry } from "astro:content";
+import { Modal } from "accessible-astro-components";
 import Botao from "./Botao.astro";
 import Link from "./Link.astro";
+
+interface Props {
+  vlink?: CollectionEntry<"produtos">;
+  id?: string;
+  estilo?: string;
+  tag?: string;
+  colunas?: string;
+  titulo: string;
+  subtitulo?: string;
+  linha?: boolean;
+  botao?: string;
+  video?: boolean;
+  link?: string;
+  key?: string;
+}
+const {
+  id,
+  estilo,
+  titulo,
+  subtitulo,
+  botao,
+  video,
+  vlink,
+  link,
+  linha,
+  key,
+  tag,
+  colunas,
+} = Astro.props;
+
+const filtro = vlink?.data.content.filter((item) => item.key === key);
 ---
 
 <section class={estilo}>
@@ -10,14 +42,161 @@ import Link from "./Link.astro";
       <span>{tag}</span>
       <h1>{titulo}</h1>
       <p>{subtitulo}</p>
+      <slot name="conteudo" />
     </div>
     {botao && <Botao estilo="claro grande mt-3" texto={botao} link={link} />}
     {link && !botao && <Link estilo="claro grande" texto={link} />}
   </div>
-  <div class={"conteudo " + colunas}>
-    <slot />
-  </div>
+  {
+    video && (
+      <div class={"video conteudo " + colunas} id={key}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 104 104"
+          class="play-interno"
+        >
+          <g filter="url(#filter0_b_1_145)">
+            <circle
+              cx="51.75"
+              cy="51.76"
+              r="51.63"
+              fill="#42F5E1"
+              fill-opacity=".7"
+            />
+          </g>
+          <path
+            fill="#FBFCFD"
+            d="M71.11 47.35a4.98 4.98 0 0 1 0 8.58L45.1 71.23a4.98 4.98 0 0 1-7.5-4.28V36.33a4.98 4.98 0 0 1 7.5-4.3l26 15.33Z"
+          />
+          <defs>
+            <filter
+              id="filter0_b_1_145"
+              width="109.9"
+              height="109.9"
+              x="-3.2"
+              y="-3.19"
+              color-interpolation-filters="sRGB"
+              filterUnits="userSpaceOnUse"
+            >
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feGaussianBlur in="BackgroundImageFix" stdDeviation="1.66" />
+              <feComposite
+                in2="SourceAlpha"
+                operator="in"
+                result="effect1_backgroundBlur_1_145"
+              />
+              <feBlend
+                in="SourceGraphic"
+                in2="effect1_backgroundBlur_1_145"
+                result="shape"
+              />
+            </filter>
+          </defs>
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 123 123"
+          class="play-externo"
+        >
+          <g filter="url(#filter0_b_536_2)">
+            <circle
+              cx="61.5"
+              cy="61.5"
+              r="60"
+              stroke="#42F5E1"
+              stroke-opacity=".2"
+              stroke-width="3"
+            />
+          </g>
+          <defs>
+            <filter
+              id="filter0_b_536_2"
+              width="129.64"
+              height="129.64"
+              x="-3.32"
+              y="-3.32"
+              color-interpolation-filters="sRGB"
+              filterUnits="userSpaceOnUse"
+            >
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feGaussianBlur in="BackgroundImageFix" stdDeviation="1.66" />
+              <feComposite
+                in2="SourceAlpha"
+                operator="in"
+                result="effect1_backgroundBlur_536_2"
+              />
+              <feBlend
+                in="SourceGraphic"
+                in2="effect1_backgroundBlur_536_2"
+                result="shape"
+              />
+            </filter>
+          </defs>
+        </svg>
+        <slot />
+      </div>
+    )
+  }
+  {
+    video &&
+      filtro?.map((item) => (
+        <Modal triggerId={item.key} closeText="X">
+          <div class="wrapper">
+            <div class="youtube" data-embed={item.video}>
+              <div class="play-button" />
+            </div>
+          </div>
+        </Modal>
+      ))
+  }
+  {
+    !video && (
+      <div class={"conteudo " + colunas}>
+        {" "}
+        <slot />{" "}
+      </div>
+    )
+  }
 </section>
+<script>
+  (function () {
+    var youtube = document.querySelectorAll(".youtube");
+
+    for (var i = 0; i < youtube.length; i++) {
+      var source =
+        "https://img.youtube.com/vi/" +
+        youtube[i].dataset.embed +
+        "/sddefault.jpg";
+
+      var image = new Image();
+      image.src = source;
+      image.addEventListener(
+        "load",
+        (function () {
+          youtube[i].appendChild(image);
+        })(i)
+      );
+
+      youtube[i].addEventListener("click", function () {
+        var iframe = document.createElement("iframe");
+
+        iframe.setAttribute("frameborder", "0");
+        iframe.setAttribute("allowfullscreen", "");
+        iframe.setAttribute(
+          "src",
+          "https://www.youtube.com/embed/" +
+            this.dataset.embed +
+            "?rel=0&showinfo=0&autoplay=1"
+        );
+
+        this.innerHTML = "";
+        this.appendChild(iframe);
+      });
+    }
+  })();
+</script>
 
 <style scoped>
   section {
@@ -136,6 +315,39 @@ import Link from "./Link.astro";
   .aprovacoes {
     min-height: 26rem;
   }
+  .video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease;
+    filter: brightness(0.8);
+    cursor: pointer;
+  }
+  .video:hover {
+    filter: brightness(1);
+  }
+  .video svg {
+    position: absolute;
+    z-index: 9;
+    transition: all 0.4s ease;
+    filter: brightness(2) contrast(3) saturate(3);
+    box-shadow: 0 0 4rem 0rem;
+    border-radius: 100rem;
+  }
+  .play-interno {
+    width: clamp(4rem, 6vw, 6rem);
+    height: auto;
+    margin-bottom: 0;
+  }
+  .play-externo {
+    width: clamp(5rem, 8vw, 7rem);
+    height: auto;
+    transform: scale(0.9);
+    margin-bottom: 0;
+  }
+  .video:hover .play-externo {
+    transform: scale(1);
+  }
   @media screen and (min-width: 768px) {
     .claro {
       width: -webkit-fill-available;
@@ -161,7 +373,7 @@ import Link from "./Link.astro";
       padding: 0;
     }
     .claro > div:first-child {
-      max-width: 26rem;
+      max-width: 34rem;
     }
   }
 </style>

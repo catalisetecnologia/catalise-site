@@ -1,8 +1,61 @@
 ---
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
 
+import Capa from "../components/Capa.astro";
+import capa from "../img/capa contato.png";
 ---
 
 <Layout title="Catálise" description="Catálise cursos">
-  <main class="container"></main>
+  <main class="container">
+    <Capa
+      id="contato"
+      title="Fale com o"
+      linha
+      destaque=" nosso time"
+      botao="Converse conosco!"
+      estilo="capa-page"
+      link="https://api.whatsapp.com/send?phone=5512997364916&text=Ol%C3%A1!%20Gostaria%20de%20ajuda"
+    >
+      <div slot="conteudo">
+        <ul class="capa-itens" slot="conteudo">
+          <li>
+            <a aria-label="whatsapp" href="tel:+5512988816588">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 480 480"
+              >
+                <path
+                  fill="#fff"
+                  d="M352 16H128a32 32 0 0 0-32 32v384a32 32 0 0 0 32 32h224a32 32 0 0 0 32-32V48a32 32 0 0 0-32-32Zm-72 16a8 8 0 1 1 0 16 8 8 0 0 1 0-16Zm-64 0h32a8 8 0 0 1 0 16h-32a8 8 0 0 1 0-16Zm136 400H128V48h48l6.62 6.62c6 6 14.15 9.38 22.63 9.38h69.49a32 32 0 0 0 22.62-9.38L304 48h48v384Z"
+                ></path>
+              </svg>
+               (12) 1298823 1606</a
+            >
+          </li>
+          <li>
+            <a
+              aria-label="email"
+              href="mailto:contato@catalisevestibulares.com.br"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 500 500"
+              >
+                <path
+                  fill="#fff"
+                  d="M55 70c-24.8 0-45 20.2-45 45v4.26L250 290l240-170.74V115c0-24.8-20.2-45-45-45H55Zm8.52 20h372.92L250 220 63.52 90ZM10 140.27V385c0 24.8 20.2 45 45 45h390c24.8 0 45-20.2 45-45V140.27l-60 42.7V410H70V182.97l-60-42.7Z"
+                ></path>
+              </svg>
+               contato@catalisevestibulares.com.br</a
+            >
+          </li>
+        </ul>
+      </div>
+      <Image src={capa} alt="Capa do Catálise" class="img-capa mt-3" slot="imagem" />
+    </Capa>
+  </main>
   <style scoped></style>
 </Layout>
