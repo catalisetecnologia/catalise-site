@@ -31,7 +31,7 @@ import capa from "../img/capa contato.png";
                   d="M352 16H128a32 32 0 0 0-32 32v384a32 32 0 0 0 32 32h224a32 32 0 0 0 32-32V48a32 32 0 0 0-32-32Zm-72 16a8 8 0 1 1 0 16 8 8 0 0 1 0-16Zm-64 0h32a8 8 0 0 1 0 16h-32a8 8 0 0 1 0-16Zm136 400H128V48h48l6.62 6.62c6 6 14.15 9.38 22.63 9.38h69.49a32 32 0 0 0 22.62-9.38L304 48h48v384Z"
                 ></path>
               </svg>
-               (12) 1298823 1606</a
+              (12) 1298823 1606</a
             >
           </li>
           <li>
@@ -49,13 +49,55 @@ import capa from "../img/capa contato.png";
                   d="M55 70c-24.8 0-45 20.2-45 45v4.26L250 290l240-170.74V115c0-24.8-20.2-45-45-45H55Zm8.52 20h372.92L250 220 63.52 90ZM10 140.27V385c0 24.8 20.2 45 45 45h390c24.8 0 45-20.2 45-45V140.27l-60 42.7V410H70V182.97l-60-42.7Z"
                 ></path>
               </svg>
-               contato@catalisevestibulares.com.br</a
+              contato@catalisevestibulares.com.br</a
             >
           </li>
         </ul>
       </div>
-      <Image src={capa} alt="Capa do Catálise" class="img-capa mt-3" slot="imagem" />
+      <Image
+        src={capa}
+        alt="Capa do Catálise"
+        class="img-capa mt-3"
+        slot="imagem"
+      />
     </Capa>
   </main>
-  <style scoped></style>
 </Layout>
+<script></script>
+<style scoped>
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+  }
+
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+</style>
