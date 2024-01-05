@@ -6,7 +6,7 @@
       "foto": "../../img/alunos-small/Arnóbio Tomaz.png",
       "capa": "../../img/aprovados/Arnóbio Tomaz.png",
       "tag": "Aprovado ITA",
-      "video": "https://www.youtube.com/embed/ffrvOyAbk1g",
+      "video": "https://www.youtube.com/embed/ffrvOyAbk1g?enablejsapi=1",
       "page": ["home", "IME"]
     },
     {
@@ -14,7 +14,7 @@
       "nome": "João Matheus",
       "foto": "../../img/alunos-small/João Matheus.png",
       "capa": "../../img/aprovados/João Matheus.png",
-      "video": "https://www.youtube.com/embed/1ik_IGhLido",
+      "video": "https://www.youtube.com/embed/1ik_IGhLido?enablejsapi=1",
       "tag": "Aprovado ITA",
       "page": ["home", "IME"]
     }

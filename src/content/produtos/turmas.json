@@ -7,7 +7,7 @@
       "nome": "ITA/IME",
       "link": "/produtos/ita-ime",
       "page": ["principal"],
-      "video": "https://www.youtube.com/embed/jcb7BXt01fw"
+      "video": "https://www.youtube.com/embed/jcb7BXt01fw?enablejsapi=1"
     },
     {
       "key": "pre-ita-ime",
@@ -16,7 +16,7 @@
       "nome": "PRÉ ITA/IME",
       "link": "/produtos/pre-ita-ime",
       "page": ["principal"],
-      "video": "https://www.youtube.com/embed/jcb7BXt01fw"
+      "video": "https://www.youtube.com/embed/jcb7BXt01fw?enablejsapi=1"
     },
     {
       "key": "revisao-ita",
@@ -25,7 +25,7 @@
       "nome": "ITA",
       "link": "/produtos/revisao-ita",
       "page": ["principal"],
-      "video": "https://www.youtube.com/embed/n6DYknV3oC4"
+      "video": "https://www.youtube.com/embed/n6DYknV3oC4?enablejsapi=1"
     },
     {
       "key": "eear",
@@ -34,7 +34,7 @@
       "nome": "EEAR",
       "link": "/produtos/eear",
       "page": ["principal"],
-      "video": "https://www.youtube.com/embed/gpaUb0twpaM"
+      "video": "https://www.youtube.com/embed/gpaUb0twpaM?enablejsapi=1"
     },
     {
       "key": "revisao-eear",
@@ -43,7 +43,7 @@
       "nome": "EEAR",
       "link": "/produtos/revisao-eear",
       "page": ["principal"],
-      "video": "https://www.youtube.com/embed/gpaUb0twpaM"
+      "video": "https://www.youtube.com/embed/gpaUb0twpaM?enablejsapi=1"
     }
   ]
 }
