@@ -63,65 +63,62 @@ import capa from "../img/capa contato.png";
         slot="imagem"
       />
     </Capa>
-    <button id="open-modal1-btn">Abrir modal</button>
-
-    <div id="modal1" class="modal1">
-      <div class="modal1-content">
-        <span id="close-modal1-btn" class="close">&times;</span>
-        <div id="youtube-player"></div>
+    <!-- HTML -->
+    <button id="abrirModal">Abrir Modal</button>
+    <div class="modal" id="modal3">
+      <div class="modal-content">
+        <span class="close">&times;</span>
         <iframe
-          id="player"
-          type="text/html"
-          width="640"
-          height="360"
-          src="https://www.youtube.com/embed/ffrvOyAbk1g?enablejsapi=1&amp;apikey=AIzaSyCNPcaSCgNRbz4Q6PFl461_RkVx5urO_rw"
-          frameborder="0"></iframe>
+          id="video"
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/VIDEO_ID"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen></iframe>
       </div>
     </div>
   </main>
 </Layout>
 <script>
-  // Cria o player do YouTube quando a API do YouTube estiver pronta
-  var player;
-  function onYouTubeIframeAPIReady() {
-    player = new YT.Player("youtube-player", {
-      playerVars: {
-        autoplay: 1,
-        controls: 1,
-        showinfo: 0,
-        rel: 0,
-        modestbranding: 1,
-      },
-      events: {
-        onReady: onPlayerReady,
-      },
-    });
+  // JavaScript
+  var modal = document.getElementById("modal3");
+  var video = document.getElementById("video");
+  var close = document.getElementsByClassName("close")[0];
+  var abrirModal = document.getElementById("abrirModal");
+
+  // Abre o modal e inicia a reprodução do vídeo
+  function openModal() {
+    modal.style.display = "block";
+    video.src = "https://www.youtube.com/embed/ffrvOyAbk1g?autoplay=1";
   }
 
-  // Inicializa o player do YouTube quando o modal for aberto
-  function onPlayerReady(event) {
-    event.target.playVideo();
+  // Fecha o modal e interrompe a reprodução do vídeo
+  function closeModal() {
+    modal.style.display = "none";
+    video.src = "";
   }
 
-  // Abre o modal
-  document
-    .getElementById("open-modal1-btn")
-    .addEventListener("click", function () {
-      document.getElementById("modal1").style.display = "block";
-    });
+  // Fecha o modal quando o usuário clica no botão 'X'
+  close.onclick = function () {
+    closeModal();
+  };
 
-  // Fecha o modal e pausa o vídeo
-  document
-    .getElementById("close-modal1-btn")
-    .addEventListener("click", function () {
-      document.getElementById("modal1").style.display = "none";
-      if (player) {
-        player.pauseVideo();
-      }
-    });
+  // Fecha o modal quando o usuário clica fora do modal
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      closeModal();
+    }
+  };
+
+  // Abre o modal quando o usuário clica no botão 'Abrir Modal'
+  abrirModal.onclick = function () {
+    openModal();
+  };
 </script>
 <style scoped>
-  .modal1 {
+  /* CSS */
+  .modal {
     display: none;
     position: fixed;
     z-index: 1;
@@ -129,28 +126,32 @@ import capa from "../img/capa contato.png";
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
-  .modal1-content {
-    background-color: #fefefe;
+  .modal-content {
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    max-width: 800px;
+    max-width: 700px;
+    position: relative;
   }
 
   .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    font-size: 35px;
     font-weight: bold;
+    cursor: pointer;
   }
 
   .close:hover,
   .close:focus {
-    color: black;
+    color: #000;
     text-decoration: none;
     cursor: pointer;
   }
