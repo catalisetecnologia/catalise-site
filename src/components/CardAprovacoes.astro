@@ -137,7 +137,9 @@ const { aprovados, page, direction } = Astro.props;
             <div class="wrapper">
               <div class="youtube">
               <iframe
-                src={aprovado.video}>
+                id="video"
+                src={aprovado.video}
+                allow="autoplay; encrypted-media">
               </iframe>
               </div>
             </div>
