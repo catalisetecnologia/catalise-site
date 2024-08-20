@@ -132,7 +132,7 @@
     },
     {
       "title": "Até quando terei acesso ao curso?",
-      "text": "Você terá acesso a todo o conteúdo da nossa TURMA ITA até dezembro de 2024.",
+      "text": "Você terá acesso a todo o conteúdo da nossa revisão para o ITA até dezembro de 2024.",
       "page": ["REV-ITA"]
     },
     {
@@ -143,11 +143,6 @@
     {
       "title": "Posso emprestar minha conta para um colega ou dividir acesso?",
       "text": "Não. A conta é individual e restrita ao aluno que efetuou a matrícula no curso. Fazendo isso, você estará violando termos de uso e correrá o risco de perder o acesso ao curso. Além disso, nosso curso te proporciona todo uma acompanhamento de desempenho individualizado, o que perderia o sentido nessa situação, prejudicando seus resultados.",
-      "page": ["REV-ITA"]
-    },
-    {
-      "title": "Eu vou começar a estudar agora e não tenho base. Conseguirei acompanhar a Turma ITA do Catálise?",
-      "text": "Sim! O foco do curso é direcionar o aluno desde o nível zero até o nível que o vestibular do ITA. As aulas, listas de exercícios e simulados são do nível zero até o nível ITA/IME.",
       "page": ["REV-ITA"]
     },
     {
