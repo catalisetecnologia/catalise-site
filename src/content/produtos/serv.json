@@ -24,14 +24,14 @@
     {
       "key": "comunidade-vip",
       "img": "../../img/destaques/Comunidade VIP.svg",
-      "tag": "Comunidade VIP",
-      "nome": "Interaja com seus colegas pelo WhatsApp, tire suas dúvidas e discutia sobre a matéria. Aqui criamos a interação que leva à aprovação.",
+      "tag": "Comunidade VIP no WhatsApp",
+      "nome": "Interaja com seus colegas, tire suas dúvidas e discutia sobre a matéria. Aqui criamos a interação que leva à aprovação.",
       "page": ["ITA-IME"]
     },
     {
       "key": "bate-papo-com-iteano",
       "img": "../../img/destaques/Bate papo com ITEANO.svg",
-      "tag": "Bate papo com ITEANO",
+      "tag": "Bate papo com convidados especiais",
       "nome": "Bate papo com convidado especial: alunos ou ex-alunos do ITA que está trabalhando em grandes empresas.",
       "page": ["REVISAO ITA"]
     },
