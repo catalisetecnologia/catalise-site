@@ -1,6 +1,15 @@
 {
   "content": [
     {
+      "id": "Aprovados ITA 2024",
+      "nome": "Aprovados ITA 2024",
+      "foto": "../../img/alunos-small/Arnóbio Tomaz.png",
+      "capa": "../../img/aprovados/Arnóbio Tomaz.png",
+      "tag": "Aprovado ITA",
+      "video": "https://www.youtube.com/watch?v=t_UDv2kNS9U",
+      "page": ["home", "IME"]
+    },
+    {
       "id": "ArnóbioTomaz",
       "nome": "Arnóbio Tomaz",
       "foto": "../../img/alunos-small/Arnóbio Tomaz.png",
