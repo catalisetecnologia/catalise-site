@@ -24,7 +24,7 @@
     {
       "key": "comunidade-vip",
       "img": "../../img/destaques/Comunidade VIP.svg",
-      "tag": "Comunidade VIP no WhatsApp",
+      "tag": "Comunidade VIP",
       "nome": "Interaja com seus colegas, tire suas dúvidas e discutia sobre a matéria. Aqui criamos a interação que leva à aprovação.",
       "page": ["ITA-IME"]
     },
@@ -45,7 +45,7 @@
     {
       "key": "comunidade-vip",
       "img": "../../img/destaques/Comunidade VIP.svg",
-      "tag": "Comunidade VIP",
+      "tag": "Comunidade VIP no WhatsApp",
       "nome": "Interaja com seus colegas pelo WhatsApp, tire suas dúvidas e discutia sobre a matéria. Aqui criamos a interação que leva à aprovação.",
       "page": ["REVISAO ITA"]
     },
