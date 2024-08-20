@@ -2,10 +2,10 @@
   "content": [
     {
       "id": "JoãoMatheus",
-      "nome": "João Matheus",
+      "nome": "Aprovados ITA 2024",
       "foto": "../../img/alunos-small/João Matheus.png",
       "capa": "../../img/aprovados/pizzada.png",
-      "video": "https://youtu.be/t_UDv2kNS9U",
+      "video": "https://www.youtube.com/embed/t_UDv2kNS9U",
       "tag": "Aprovado ITA",
       "page": ["home", "IME"]
     },
