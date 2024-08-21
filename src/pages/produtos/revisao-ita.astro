@@ -43,6 +43,28 @@ const serv = await getEntry("produtos", "serv");
       <Image src={capa} alt="Capa do Catálise" class="img-capa" slot="imagem" />
     </Capa>
     <Destaques destaques={destaques} page="REVISAO ITA" />
+
+    <Capa estilo="claro" title="Material didático">
+      <div slot="conteudo">
+        <p class="txt-capa-claro">
+          Entrando para a Turma ITA-IME você terá acesso a materiais didáticos
+          criados para auxiliar na sua aprendizagem:
+        </p>
+        <ul class="mt-2">
+          <li>Bizuários de Química para o ITA</li>
+          <li>Miscelâneas ITA, IME, AFA e EEAR</li>
+          <li>Checklists dos assuntos</li>
+          <li>Listas de Exercício do Básico ao Avançado</li>
+        </ul>
+      </div>
+      <Image
+        src={materiais}
+        alt="Capa do Catálise"
+        class="img-capa-material"
+        slot="imagem"
+      />
+    </Capa>
+
     <Section
       estilo="claro"
       titulo="Acelere sua aprovação nesta reta final"
