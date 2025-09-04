@@ -24,7 +24,7 @@
     {
       "key": "simulados-com-correção",
       "img": "../../img/destaques/simulados com resolução.svg",
-      "tag": "Simulados com correção",
+      "tag": "Simulados com resolução",
       "nome": "7 ciclos de simulados: 1 de embasamento, 6 modelos ITA (1ª e 2ª fase), com gabarito e resolução de todas matérias.",
       "page": ["home"]
     },
@@ -47,13 +47,6 @@
       "img": "../../img/destaques/lista de exercícios2.svg",
       "tag": "Listas do Básico ao Avançado",
       "nome": "Após as aulas aprimore-se com listas de exercícios do básico ao avançado. Com elas você não vai precisar de nenhum outro material.",
-      "page": ["ITA-IME"]
-    },
-    {
-      "key": "relatório-de-desempenho",
-      "img": "../../img/destaques/relatório de desempenho.svg",
-      "tag": "Relatório de desempenho",
-      "nome": "Após o simulado receba um relatório de desempenho individual, acompanhe sua evolução por matéria e descubra o que mais você precisar.",
       "page": ["ITA-IME"]
     },
     {
