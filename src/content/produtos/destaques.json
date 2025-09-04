@@ -15,13 +15,6 @@
       "page": ["home"]
     },
     {
-      "key": "plantão-de-dúvidas",
-      "img": "../../img/destaques/plantão de dúvidas.svg",
-      "tag": "Plantão de dúvidas",
-      "nome": "Tire suas dúvidas de Física, Química e Matemática ao vivo por chamada do Google Meet. Agende e converse com um professor.",
-      "page": ["home"]
-    },
-    {
       "key": "simulados-com-resolução",
       "img": "../../img/destaques/simulados com resolução.svg",
       "tag": "Simulados com resolução",
