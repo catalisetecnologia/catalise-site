@@ -57,13 +57,6 @@
       "page": ["EEAR"]
     },
     {
-      "key": "relatório-de-desempenho",
-      "img": "../../img/destaques/relatório de desempenho.svg",
-      "tag": "Relatório de desempenho",
-      "nome": "Após o simulado receba um relatório de desempenho individual, acompanhe sua evolução por matéria e descubra o que mais você precisar.",
-      "page": ["EEAR"]
-    },
-    {
       "key": "comunidade-vip",
       "img": "../../img/destaques/Comunidade VIP.svg",
       "tag": "Comunidade VIP",
