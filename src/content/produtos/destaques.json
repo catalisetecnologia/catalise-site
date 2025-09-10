@@ -15,6 +15,13 @@
       "page": ["home"]
     },
     {
+      "key": "plantão-de-dúvidas",
+      "img": "../../img/destaques/plantão de dúvidas.svg",
+      "tag": "Plantão de dúvidas",
+      "nome": "Tire suas dúvidas de Física, Química e Matemática ao vivo por chamada do Google Meet. Agende e converse com um professor.",
+      "page": ["home"]
+    },
+    {
       "key": "simulados-com-resolução",
       "img": "../../img/destaques/simulados com resolução.svg",
       "tag": "Simulados com resolução",
@@ -43,6 +50,13 @@
       "page": ["ITA-IME"]
     },
     {
+      "key": "relatório-de-desempenho",
+      "img": "../../img/destaques/relatório de desempenho.svg",
+      "tag": "Relatório de desempenho",
+      "nome": "Após o simulado receba um relatório de desempenho individual, acompanhe sua evolução por matéria e descubra o que mais você precisar.",
+      "page": ["ITA-IME"]
+    },
+    {
       "key": "trilha-de-estudos",
       "img": "../../img/destaques/trilha de estudos.svg",
       "tag": "Trilha de Estudos",
@@ -61,6 +75,13 @@
       "img": "../../img/destaques/lista de exercícios2.svg",
       "tag": "Listas do Básico ao Avançado",
       "nome": "Após as aulas aprimore-se com listas de exercícios do básico ao avançado. Com elas você não vai precisar de nenhum outro material.",
+      "page": ["PRE-ITA-IME"]
+    },
+    {
+      "key": "relatório-de-desempenho",
+      "img": "../../img/destaques/relatório de desempenho.svg",
+      "tag": "Relatório de desempenho",
+      "nome": "Após o simulado receba um relatório de desempenho individual, acompanhe sua evolução por matéria e descubra o que mais você precisar.",
       "page": ["PRE-ITA-IME"]
     },
     {
@@ -292,6 +313,13 @@
       "img": "../../img/destaques/lista de exercícios2.svg",
       "tag": "Listas até o nível avançado",
       "nome": "Ao final de cada tópico o aluno realiza listas abrangentes que impulsionam seu desempenho, simplificam a revisão do assunto e otimizam o preparo para provas.",
+      "page": ["PLANO-ESCOLAS"]
+    },
+    {
+      "key": "relatório-de-desempenho",
+      "img": "../../img/destaques/relatório de desempenho.svg",
+      "tag": "Relatório de Desempenho",
+      "nome": "Após o simulado receba um relatório de desempenho individual, acompanhe sua evolução por matéria e descubra o que mais você precisar.",
       "page": ["PLANO-ESCOLAS"]
     }
   ]
