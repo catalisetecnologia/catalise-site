@@ -4,17 +4,8 @@
       "key": "ita-ime",
       "img": "../../img/turmas-card/ita-ime.png",
       "tag": "Turma",
-      "nome": "ITA/IME",
+      "nome": "Pocket ITA/IME",
       "link": "/produtos/ita-ime",
-      "page": ["principal"],
-      "video": "https://www.youtube.com/embed/jcb7BXt01fw?enablejsapi=1"
-    },
-    {
-      "key": "pre-ita-ime",
-      "img": "../../img/turmas-card/ita-ime.png",
-      "tag": "Turma",
-      "nome": "PRÉ ITA/IME",
-      "link": "/produtos/pre-ita-ime",
       "page": ["principal"],
       "video": "https://www.youtube.com/embed/jcb7BXt01fw?enablejsapi=1"
     },
@@ -26,24 +17,6 @@
       "link": "/produtos/revisao-ita",
       "page": ["principal"],
       "video": "https://www.youtube.com/embed/bQN5xA-bhuQ"
-    },
-    {
-      "key": "eear",
-      "img": "../../img/turmas-card/eear.png",
-      "tag": "Turma",
-      "nome": "EEAR",
-      "link": "/produtos/eear",
-      "page": ["principal"],
-      "video": "https://www.youtube.com/embed/gpaUb0twpaM?enablejsapi=1"
-    },
-    {
-      "key": "revisao-eear",
-      "img": "../../img/turmas-card/eear.png",
-      "tag": "Revisão",
-      "nome": "EEAR",
-      "link": "/produtos/revisao-eear",
-      "page": ["principal"],
-      "video": "https://www.youtube.com/embed/gpaUb0twpaM?enablejsapi=1"
     }
   ]
 }
