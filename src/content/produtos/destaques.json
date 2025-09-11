@@ -50,13 +50,6 @@
       "page": ["ITA-IME"]
     },
     {
-      "key": "relatório-de-desempenho",
-      "img": "../../img/destaques/relatório de desempenho.svg",
-      "tag": "Relatório de desempenho",
-      "nome": "Após o simulado receba um relatório de desempenho individual, acompanhe sua evolução por matéria e descubra o que mais você precisar.",
-      "page": ["ITA-IME"]
-    },
-        {
       "key": "simulados-com-resolução",
       "img": "../../img/destaques/simulados com resolução.svg",
       "tag": "Simulados com resolução",
