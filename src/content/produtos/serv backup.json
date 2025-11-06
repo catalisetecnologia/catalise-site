@@ -2,9 +2,9 @@
   "content": [
     {
       "key": "aulas-de-redação",
-      "img": "../../img/destaques/plantão de dúvidas.svg",
-      "tag": "Aulas ao Vivo de Exatas",
-      "nome": "Tenha 3 aulas ao vivo por semana com listas exclusivas! Uma excelente oportunidade para revisar e aprofundar o conteúdo de cada módulo e tirar dúvidas direto com os professores.",
+      "img": "../../img/destaques/aulas de redação.svg",
+      "tag": "Aulas de Redação",
+      "nome": "Como a Redação vale 20% da sua média final e os alunos tem muitas dúvidas, nossas aulas de redação serão 100% AO VIVO.",
       "page": ["ITA-IME"]
     },
     {
@@ -24,7 +24,7 @@
     {
       "key": "comunidade-vip",
       "img": "../../img/destaques/Comunidade VIP.svg",
-      "tag": "Grupo de alunos",
+      "tag": "Comunidade VIP",
       "nome": "Interaja com seus colegas, tire suas dúvidas e discutia sobre a matéria. Aqui criamos a interação que leva à aprovação.",
       "page": ["ITA-IME"]
     },
