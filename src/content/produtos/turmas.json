@@ -7,6 +7,15 @@
       "nome": "Pocket ITA/IME",
       "link": "/produtos/ita-ime",
       "page": ["principal"],
+      "video": "https://www.youtube.com/embed/pYEMy2J20s8?enablejsapi=1"
+    },
+    {
+      "key": "ita-ime",
+      "img": "../../img/turmas-card/ita-ime.png",
+      "tag": "Turma",
+      "nome": "Pocket ITA/IME",
+      "link": "/produtos/ita-ime",
+      "page": ["principal"],
       "video": "https://www.youtube.com/embed/jcb7BXt01fw?enablejsapi=1"
     },
     {
